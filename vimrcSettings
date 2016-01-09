@@ -1,0 +1,6 @@
+" Erlaubt das Wechseln von Buffern (ohne dabie den Buffer zu speichern)
+set hidden
+" Ignoriere Groß- oder Kleinschreibung bei der Suche
+set ignorecase
+" Wenn doch Großbuchstaben bei der suche vorkommen, dann suche danach
+set smartcase

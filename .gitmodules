@@ -1,0 +1,21 @@
+[submodule "dotbot"]
+	path = dotbot
+	url = https://github.com/anishathalye/dotbot
+[submodule "fzf"]
+	path = fzf
+	url = https://github.com/junegunn/fzf
+[submodule "oh-my-zsh"]
+	path = oh-my-zsh
+	url = https://github.com/robbyrussell/oh-my-zsh
+[submodule "base16-gnome-terminal"]
+	path = base16-gnome-terminal
+	url = https://github.com/chriskempson/base16-gnome-terminal
+[submodule "vim/autoload"]
+	path = vim/autoload
+	url = https://github.com/junegunn/vim-plug
+[submodule "gist/tarruda/5158535"]
+	path = gist/tarruda/5158535
+	url = https://gist.github.com/tarruda/5158535
+[submodule "todo.txt-cli"]
+	path = todo.txt-cli
+	url = https://github.com/ginatrapani/todo.txt-cli

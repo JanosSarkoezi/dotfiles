@@ -1,0 +1,209 @@
+" vim: fdm=marker ts=2 sts=2 sw=2 fdl=0
+" Die Idee für die Konfiguration des Vim habe ich aus der vimrc 
+" Datei von Bailey Ling. Ich finde sie sehr gelungen. :)
+
+" Ermittle das Operations-System {{{
+  let s:is_windows = has('win32') || has('win64')
+  let s:is_cygwin = has('win32unix')
+  let s:is_macvim = has('gui_macvim')
+"}}}
+" Die globalen dotvim Einstellungen überprüfen {{{
+  if !exists('g:dotvim_settings') || !exists('g:dotvim_settings.version')
+    echom 'Die g:dotvim_settings Variable und die Version der Vimrc-Datei muss definiert sein.'
+    finish
+  endif
+  if g:dotvim_settings.version != 1
+    echom 'Die Versionsangabe in der Varialble g:dotvim_settings.version muss 1 sein!'
+    finish
+  endif
+"}}}
+" Initialize Standardeinstellungen für die Plugins {{{
+  let s:settings = {}
+  let s:settings.default_indent = 4
+  let s:settings.max_column = 120
+  let s:settings.colorscheme = 'jellybeans'
+
+  if exists('g:dotvim_settings.plugin_groups')
+    let s:settings.plugin_groups = g:dotvim_settings.plugin_groups
+  else
+    let s:settings.plugin_groups = []
+    call add(s:settings.plugin_groups, 'minimal')
+    call add(s:settings.plugin_groups, 'core')
+    call add(s:settings.plugin_groups, 'java')
+    if s:is_windows
+      call add(s:settings.plugin_groups, 'windows')
+    endif
+
+    " Schliesse alle programmierspezifischen Plugins aus
+    if !exists('g:dotvim_settings.plugin_groups_exclude')
+      let g:dotvim_settings.plugin_groups_exclude = ['java']
+    endif
+    for group in g:dotvim_settings.plugin_groups_exclude
+      let i = index(s:settings.plugin_groups, group)
+      if i != -1
+        call remove(s:settings.plugin_groups, i)
+      endif
+    endfor
+
+    if exists('g:dotvim_settings.plugin_groups_include')
+      for group in g:dotvim_settings.plugin_groups_include
+        call add(s:settings.plugin_groups, group)
+      endfor
+    endif
+  endif
+
+  " Überschreibe die Standardeinstellung mit den in der Variable g:dotvim_settings
+  " definierten Werten.
+  for key in keys(s:settings)
+    if has_key(g:dotvim_settings, key)
+      let s:settings[key] = g:dotvim_settings[key]
+    endif
+  endfor
+" }}}
+" Resetten aller Variablen und Neobundle im Runtimepath aufnehmen {{{
+  set nocompatible
+  " Standard Werte herstellen
+  " set all&
+  if s:is_windows
+    set runtimepath+=~/.vim
+  endif
+  " Notwendig für Neobundle. Für diese Funktionalität muss Neobunle mit
+  " git clone https://github.com/Shougo/neobundle.vim ~/.vim/bundle/vim-neobundle
+  " installiert werden
+  set runtimepath+=~/.vim/bundle/neobundle.vim
+  " Required:
+  call neobundle#begin(expand('~/.vim/bundle/'))
+  NeoBundleFetch 'Shougo/neobundle.vim'
+" }}}
+" Eigene Basiskonfiguration {{{
+  " Sets und Lets {{{
+  " Erlaubt das Wechseln von Buffern (ohne dabie den Buffer zu speichern)
+  set hidden
+
+  " Setzt die Zusammenklapparkeit von Bereichen auf marker
+  set foldmethod=marker
+  " Mapt das Leehrzeichen auf das Zusammen und Aufklappen von Bereichen.
+  nnoremap <Space> za
+
+  " Update die Anzeige nicht solange makros ausgeführt werden
+  set lazyredraw
+
+  " Zeige den aktuellen Anzgeigemodus an, in der du bist
+  set showmode
+
+  " Setzt das Markieren eines gesuchten Textes auf an
+  set hls
+
+  " Einstellungen für das Arbeiten mit dem Tablator
+  let &tabstop=s:settings.default_indent
+  let &softtabstop=s:settings.default_indent
+  let &shiftwidth=s:settings.default_indent
+  set expandtab
+
+  " Schalte verbesserten CommandLine mudus ein. Funktionier nur mit
+  " +wildmenu. Siehe :help 'wildmenu'
+  set wildmenu
+
+  " Ignoriere Groß- oder Kleinschreibung bei der Suche
+  set ignorecase
+  " Wenn doch Großbuchstaben bei der suche vorkommen, dann suche danach
+  set smartcase
+  " Arbeiten mit dem Zwischenspeicher erleichtern. Hiermit wird das ein-
+  " fügen und auslesen aus dem Zwischenspeicher mit den bekannten Tasten
+  " y und p ermöglicht.
+  set clipboard=unnamed
+  if has('unnamedplus')
+    set clipboard=unnamed,unnamedplus
+  endif
+  " Visulelles aufhellen der Zeile, in der Cursor sich befindet
+  " set cursorline 
+  " Markiert den Text (das Muster, Pattern), der gesucht wird, während 
+  " des Schreibens
+  set incsearch
+
+  " Benutze die selben Symbole wie TextMate für Tabstops und EOLs
+  " Damit diese Sonderzeichen › (U+203A), ▸ (U+25B8) und ¬ (U+00AC)
+  " funktionieren muss das Encoding schon hier auf UTF-8 gesetzt weden.
+  " Denn das Standardencodig von gvim unter Windows ist latin1
+  set encoding=utf-8
+  set listchars=tab:▸\ ,eol:¬
+  " }}} 
+  " Mappings {{{
+  " Einfacheres bearbeiten von dieser Datei (Merkstütze für die 
+  " Tastensequenz 'e'dit 'v'imrc)
+  nmap <silent> <leader>ev :e $MYVIMRC<cr>
+  " Mapt das Leehrzeichen auf das Zusammen und Aufklappen von Bereichen.
+  nnoremap <Space> za
+  " Einfacheres erneutes Einlesen von dieser Datei (Merkstütze für die 
+  " Tastensequenz 's'ource 'v'imrc)
+  nmap <silent> <leader>sv :so $MYVIMRC<cr>
+  " Ein und ausschalten von `set list`
+  nmap <leader>l :set list!<CR>
+  " Dies ist eine Einstellung für die deutsche Tastatur.
+  " Springe zu einem TAG
+  nnoremap t <C-]>
+  " Intelegentes Aussteigen aus der Bearbeitungsmodus des Vim
+  inoremap jj <esc>
+  " }}}
+" }}}
+" Konfiguration der Plugins {{{
+  if count(s:settings.plugin_groups, 'minimal') "{{{
+      " Anzah der Farben im Terminal
+      set t_Co=256
+      " Encoding der Textdatei sei UTF-8. Das Encoding wurde weiter oben
+      " für die Enstellungen der Option list auf UTF-8 umgestellt. Hier
+      " nochmals die Enstellung auf UTF-8, sodass im oberen Bereich die
+      " Einstellungen gelöscht werden können, ohne diese zu verlieren.
+      set encoding=utf-8
+    NeoBundle 'Lokaltog/vim-easymotion', {'directory': 'vim-easymotion'} "{{{
+    "}}}
+    NeoBundle 'tejr/sahara', {'directory': 'vim-sahara'} "{{{
+    "}}}
+    NeoBundle 'aquach/vim-http-client', {'directory': 'vim-http-client'} "{{{
+    "}}}
+  endif "}}}
+  if count(s:settings.plugin_groups, 'core') "{{{
+    NeoBundle 'majutsushi/tagbar', {'directory': 'vim-tagbar'} "{{{
+      nnoremap <silent> <F8> :TagbarToggle<CR>
+    "}}}
+    NeoBundle 'vim-scripts/DfrankUtil', {'directory': 'vim-DfrankUtil'} "{{{
+    "}}}
+    NeoBundle 'vim-scripts/vimprj', {'directory': 'vim-vimprj'} "{{{
+    "}}}
+    NeoBundle 'vim-scripts/indexer.tar.gz', {'directory': 'vim-indexer'} "{{{
+      let g:indexer_ctagsCommandLineOptions = ''
+    "}}}
+    NeoBundle 'tpope/vim-fugitive', {'directory': 'vim-fugitive'} "{{{
+      nnoremap <silent> <leader>gs :Gstatus<CR>
+      nnoremap <silent> <leader>gd :Gdiff<CR>
+      nnoremap <silent> <leader>gc :Gcommit<CR>
+      nnoremap <silent> <leader>gb :Gblame<CR>
+      nnoremap <silent> <leader>gl :Glog<CR>
+      nnoremap <silent> <leader>gp :Git push<CR>
+      nnoremap <silent> <leader>gw :Gwrite<CR>
+      nnoremap <silent> <leader>gr :Gremove<CR>
+      autocmd FileType gitcommit nmap <buffer> U :Git checkout -- <C-r><C-g><CR>
+      autocmd BufReadPost fugitive://* set bufhidden=delete
+    "}}}
+    NeoBundleLazy 'gregsexton/gitv', {'depends':['tpope/vim-fugitive'], 'autoload':{'commands':'Gitv'}} "{{{
+      nnoremap <silent> <leader>gv :Gitv<CR>
+      nnoremap <silent> <leader>gV :Gitv!<CR>
+    "}}}
+  endif "}}}
+" }}}
+" Schalte nicht benötigte Plugins aus {{{
+  if exists('g:dotvim_settings.disabled_plugins')
+    for plugin in g:dotvim_settings.disabled_plugins
+      exec 'NeoBundleDisable '.plugin
+    endfor
+  endif
+
+  " Vim versucht den Typ der Datei zu ermitteln
+  " Vim lädt die Plugins zu dem ermittelten Typ der Datei
+  " Vim lädt die Einrückungen zu dem ermittelten Typ der Datei
+  filetype plugin indent on
+  " Schaltet das syntax highlighting ein
+  syntax enable
+  NeoBundleCheck
+  call neobundle#end()
+"}}}
