@@ -1,6 +1,7 @@
 call plug#begin('~/.vim/bundle')
 
 Plug 'https://github.com/junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'https://github.com/junegunn/fzf.vim'
 Plug 'https://github.com/easymotion/vim-easymotion'
 Plug 'https://github.com/danchoi/elinks.vim'
 Plug 'epeli/slimux'
