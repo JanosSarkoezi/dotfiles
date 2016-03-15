@@ -53,7 +53,6 @@ plugins=(git z)
 
 # User configuration
 
-export PATH=$HOME/bin:/usr/local/bin:$PATH
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -85,3 +84,4 @@ source $ZSH/oh-my-zsh.sh
 alias t="~/.dotfiles/todo.txt-cli/todo.sh"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+[ -f ~/.user.zsh ] && source ~/.user.zsh
