@@ -2,5 +2,14 @@
 set hidden
 " Ignoriere Groß- oder Kleinschreibung bei der Suche
 set ignorecase
-" Wenn doch Großbuchstaben bei der suche vorkommen, dann suche danach
+" Wenn doch Großbuchstaben bei der suche vorkommen, dann suche danachxxx
 set smartcase
+set t_Co=256
+set background=dark
+
+colors default
+
+highlight DiffAdd    cterm=none ctermbg=28  ctermfg=white
+highlight DiffChange cterm=none ctermbg=33  ctermfg=black
+highlight DiffText   cterm=none ctermbg=191 ctermfg=black
+highlight DiffDelete cterm=none ctermbg=160 ctermfg=black

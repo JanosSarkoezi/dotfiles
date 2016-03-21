@@ -5,5 +5,6 @@ Plug 'https://github.com/junegunn/fzf.vim'
 Plug 'https://github.com/easymotion/vim-easymotion'
 Plug 'https://github.com/danchoi/elinks.vim'
 Plug 'epeli/slimux'
+Plug 'chriskempson/base16-vim'
 
 call plug#end()
