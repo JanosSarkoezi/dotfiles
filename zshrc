@@ -83,6 +83,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias t="~/.dotfiles/todo.txt-cli/todo.sh"
 alias tmux="TERM=xterm-256color tmux"
+export EDITOR='vim'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 [ -f ~/.user.zsh ] && source ~/.user.zsh
