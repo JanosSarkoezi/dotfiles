@@ -7,6 +7,22 @@ set smartcase
 set t_Co=256
 set background=dark
 
+" Benutze die selben Symbole wie TextMate für Tabstops und EOLs
+" Damit diese Sonderzeichen › (U+203A), ▸ (U+25B8) und ¬ (U+00AC)
+" funktionieren muss das Encoding schon hier auf UTF-8 gesetzt weden.
+" Denn das Standardencodig von gvim unter Windows ist latin1
+set encoding=utf-8
+set listchars=tab:▸\ ,eol:¬
+"
+" Benutze die selben Symbole wie Eclipse für Tabstops und EOLs
+" » (U+00BB) und ¶ (U+00B6). Die vorher gesetzten Symbole werden
+" überschrieben.
+set listchars=tab:»\ ,eol:¶,trail:.
+
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+
 colors default
 
 highlight DiffAdd    cterm=none ctermbg=28  ctermfg=white
