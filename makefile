@@ -9,6 +9,9 @@ install:
 	ln -s ~/.dotfiles/fzf ~/.fzf
 	ln -s ~/.dotfiles/oh-my-zsh ~/.oh-my-zsh
 	ln -s ~/.dotfiles/vim ~/.vim
+	ln -s ~/.dotfiles/vimrc ~/.vimrc
+	ln -s ~/.dotfiles/vim ~/.nvim
+	ln -s ~/.dotfiles/vimrc ~/.nvimrc
 	ln -s ~/.dotfiles/themes ~/.dotfiles/oh-my-zsh/custom/themes
 	ln -s ~/.dotfiles/gist/tarruda/5158535/vim-tmux-move.zsh ~/.bin/vim-tmux-move.zsh
 	ln -s ~/.dotfiles/gist/tarruda/5158535/vim-tmux-xpaste.zsh ~/.bin/vim-tmux-xpaste.zsh
