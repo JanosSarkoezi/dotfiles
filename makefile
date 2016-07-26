@@ -1,3 +1,5 @@
+SHELL=zsh
+
 update: fzf elinks oh-my-zsh todo.txt-cli base16-gnome-terminal gist/tarruda/5158535 vim/autoload
 
 install:
@@ -19,39 +21,24 @@ install:
 	~/.fzf/install --all
 
 fzf:
-	cd fzf
-	git pull
-	~/.fzf/install --all
-	cd ..
+	pushd fzf; git pull; ~/.fzf/install --all; popd
 
 elinks:
-	cd elinks
-	git pull
-	cd ..
+	pushd elinks; git pull; popd
 
 oh-my-zsh:
-	cd oh-my-zsh
-	git pull
-	cd ..
+	pushd oh-my-zsh; git pull; popd
 
 todo.txt-cli:
-	cd todo.txt-cli
-	git pull
-	cd ..
+	pushd todo.txt-cli; git pull; popd
 
 base16-gnome-terminal:
-	cd base16-gnome-terminal
-	git pull
-	cd ..
+	pushd base16-gnome-terminal; git pull; popd
 
 gist/tarruda/5158535:
-	cd gist/tarruda/5158535
-	git pull
-	cd ..
+	pushd gist/tarruda/5158535; git pull; popd
 
 vim/autoload:
-	cd vim/autoload
-	git pull
-	cd ..
+	pushd vim/autoload; git pull; popd
 
 .PHONY: fzf elinks oh-my-zsh todo.txt-cli base16-gnome-terminal gist/tarruda/5158535 vim/autoload install update
