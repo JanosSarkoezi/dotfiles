@@ -174,13 +174,14 @@ bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #i
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
 
-set $mode_launcher Launch: [l]ock [e]xit [s]hutdown
+set $mode_launcher Launch: [l]ock [e]xit [s]hutdown [r]eboot
 bindsym $mod+x mode "$mode_launcher"
 
 mode "$mode_launcher" {
     bindsym l exec i3lock, mode "default"
     bindsym e exec i3-msg exit, mode "default"
     bindsym s exec systemctl poweroff, mode "default"
+    bindsym r exec systemctl reboot, mode "default"
 
     bindsym Esc mode "default"
     bindsym Return mode "default"
