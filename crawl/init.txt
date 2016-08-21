@@ -1,0 +1,122 @@
+show_more            = false
+show_travel_trail    = true
+# SAJ tile_layout_priority = minimap, monster
+travel_delay         = -1
+rest_delay           = -1
+
+bindkey = [z] CMD_MAP_MOVE_UP_LEFT
+bindkey = [Z] CMD_MAP_JUMP_UP_LEFT
+
+bindkey = [z] CMD_MOVE_UP_LEFT
+bindkey = [Z] CMD_RUN_UP_LEFT
+
+bindkey = [z] CMD_TARGET_UP_LEFT
+bindkey = [Z] CMD_TARGET_DIR_UP_LEFT
+
+bindkey = [y] CMD_CAST_SPELL
+bindkey = [Y] CMD_FORCE_CAST_SPELL
+
+##### amalloy            ############################################
+#
+#
+##### 1- Starting Screen ############################################
+#
+restart_after_game = true
+default_manual_training = true
+
+##### 3-  Interface #################################################
+#
+##### 3-a       Picking up and Dropping ###############
+#
+
+drop_filter += useless_item
+drop_filter += skeleton, corpse, useless_item
+
+##### 3-h       Command Enhancements ##################
+#
+confirm_butcher        = never 
+easy_eat_chunks        = true
+auto_eat_chunks        = true
+auto_drop_chunks       = rotten
+easy_quit_item_prompts = true
+autofight_caught       = true
+warn_hatches           = true
+autofight_stop         = 50
+
+##### 3-i       Messages and Display Enhancements #####
+#
+hp_warning     = 30
+hp_colour      = 70:yellow, 40:red
+show_newturn_mark            = false
+
+## Avoid wasting turns with aborted actions:
+force_more_message += This wand has no charges
+force_more_message += You have finished your manual of
+force_more_message += ^Xom
+force_more_message += is wielding .* (distortion|chaos|electrocution)
+force_more_message += hadows whirl around
+force_more_message += feel strangely (un)?stable
+force_more_message += You miscast
+force_more_message += You have no means to grasp
+force_more_message += in your present form
+force_more_message += (shrike|juggernaut|of fire|lich).*(comes? into view|too close|opens the)
+force_more_message += You are contaminated with residual magic.
+force_more_message += Your guardian golem overheats!
+
+force_more_messsge += Your time is quickly running out!
+flash_screen_messsge += Your time is quickly running out!
+force_more_message += Your life is in your own hands again!
+flash_screen_message += Your life is in your own hands again!
+
+spell_slot ^= ozocubu's armour : o
+spell_slot ^= blink : bik
+spell_slot ^= apport : pa
+spell_slot ^= regen : rg
+spell_slot ^= shadow creatures : wc
+spell_slot ^= missiles : m
+spell_slot ^= (dispersal|disjunction) : Dd
+spell_slot ^= death's door : DO
+
+
+spell_slot ^= snakes : ts
+spell_slot ^= Spider form : s
+spell_slot ^= ice form : ifc
+spell_slot ^= blade hands : bB
+spell_slot ^= hydra : H
+spell_slot ^= dragon form : DFd
+
+spell_slot ^= call imp : ic
+spell_slot ^= canine : cdf
+spell_slot ^= lightning spire : lL
+spell_slot ^= ice beast : bi
+spell_slot ^= guardian golem : gG
+spell_slot ^= abjuration : jJ
+
+spell_slot ^= invis : iI
+spell_slot ^= discord : DdCc
+
+spell_slot ^= passage of golubria : gGP
+
+##### 3-m       Inscriptions ##########################
+#
+autoinscribe += potion.*(mutation|heal|curing|haste|resist):!q
+autoinscribe += potion.*blood:@q1
+
+autoinscribe += scroll.*(tele|blink|fog|holy|torment|fear):!r
+autoinscribe += scroll.*identify:@r1
+autoinscribe += scroll.*teleport:@r2
+autoinscribe += scroll.*recharg:@r3
+autoinscribe += scroll.*remove curse:@r4
+
+autoinscribe += wand.*hast:@v1
+autoinscribe += wand.*tele:@v2
+autoinscribe += wand.*heal:@v3
+
+: if you.race() == "Vine Stalker" then
+  autoinscribe += (wand.*heal|potion.*curing):you can't heal
+: end
+
+##### 3-o       Tile related Options ##################
+#
+tile_layout_priority  = monster, inventory, spell, gold_turn, command
+tile_layout_priority += ability, minimap
