@@ -7,5 +7,7 @@ Plug 'https://github.com/easymotion/vim-easymotion'
 Plug 'https://github.com/danchoi/elinks.vim'
 Plug 'epeli/slimux'
 Plug 'chriskempson/base16-vim'
+Plug 'tpope/vim-fugitive'
+Plug 'junegunn/gv.vim'
 
 call plug#end()
