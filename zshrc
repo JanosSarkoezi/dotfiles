@@ -85,6 +85,7 @@ alias t="~/.dotfiles/todo.txt-cli/todo.sh"
 alias tmux="TERM=xterm-256color ~/.bin/tmux"
 alias vim='nvim'
 export EDITOR='nvim'
+alias glol="git log --graph --pretty='%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 [ -f ~/.user.zsh ] && source ~/.user.zsh
