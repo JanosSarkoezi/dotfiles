@@ -1,0 +1,484 @@
+body {
+    background-color: #222 !important;
+    color: #DDD !important;
+}
+#hlogo {
+    -webkit-filter: invert(100%) !important;
+}
+#hmenus .nav ul li a {
+    background-color: #444 !important;
+}
+#hmenus .nav ul li.youarehere a, #hmenus .nav ul li a:hover {
+    background-color: #158 !important;
+}
+#content {
+    background-color: #333 !important;
+}
+#question-header .question-hyperlink {
+    color: #F69C55 !important;
+}
+.vote span, a {
+    color: #8CF !important;
+}
+a.bounty-link, .subheader h2 {
+    color: #FFF !important;
+}
+code {
+    background-color: #1E1E1E !important;
+}
+.post-tag, .geo-tag, .container .chosen-choices .search-choice, .container .chosen-container-multi .chosen-choices li.search-choice {
+    background-color: #444 !important;
+    color: #8CF !important;
+}
+.user-info, .badgecount, .post-menu>a {
+    color: #AAA !important;
+}
+.post-menu>a:hover, .favoritecount b {
+    color: #DDD !important;
+}
+.label-key b, .label-key strong {
+    color: #FED !important;
+}
+.label-key, .question-hyperlink:visited, .answer-hyperlink:visited, #hot-network-questions ul a:visited {
+    color: #DEF !important;
+}
+.question-hyperlink, .answer-hyperlink {
+    color: #F69C55 !important;
+}
+.question-page #answers .answer, tr.comment>td, .comments, .subheader, #question-header, .wmd-preview {
+    border-color: #777 !important;
+}
+.user-show-new .user-rep-chart-summary {
+    border-color: #777 !important;
+}
+#profile-summary>.-popout {
+    background-color: #222 !important;
+    border-color: #777 !important;
+}
+.welovestackoverflow {
+    border-color: #777 !important;
+}
+.welovestackoverflow a {
+    color: #8CF !important;
+}
+.companyPreview>footer a, .companyPreview>footer a._visited, .companyPreview>footer a:visited {
+    background-color: #222 !important;
+}
+.user-show-new .user-panel .mini-counts, .user-show-new #user-tab-answers .answer-votes, .user-show-new .post-container .vote, .user-show-new .user-rep .rep-amount .rep-up, .user-show-new .user-rep .rep-amount .rep-down {
+    color: #DDD !important;
+}
+#newsletter-ad {
+    -webkit-filter: invert(85%) !important;
+    color: #000 !important;
+}
+.clc-cp-sb {
+    border-color: #555 !important;
+}
+.clc-cp-sb .clc-cp-sb-body .clc-cp-sb-benefits .clc-cp-sb-benefit span {
+    color: #DDD !important;
+}
+blockquote {
+    background-color: #222 !important;
+    border-color: #555 !important;
+}
+.post-text a:visited, .comment-text a:not(.comment-user):visited {
+    color: #8CF !important;
+}
+#sidebar h4 {
+    color: #BBB !important;
+}
+#sidebar .community-bulletin .bulletin-item-content a {
+    color: #CCC !important !important;
+}
+.question-hyperlink:visited, .answer-hyperlink:visited, #hot-network-questions ul a:visited {
+    color: #BBB !important;
+}
+.user-info, .post-menu>a, .owner {
+    background-color: #444 !important;
+    color: #CCC !important;
+}
+#tabs a, .tabs a, .newnav .tabs-list-container .tabs-list .intellitab a {
+    background-color: #444 !important;
+    color: #AAA !important;
+}
+#tabs a:hover, .tabs a:hover, .newnav .tabs-list-container .tabs-list .intellitab a:hover {
+    color: #EEE !important;
+}
+#tabs a.youarehere, .tabs a.youarehere, .newnav .tabs-list-container .tabs-list .intellitab a.youarehere {
+    border-color: #777 !important;
+    color: #FFF !important;
+    background-color: #555 !important;
+}
+div.clc-jobs-multi.blue {
+    background-color: #135 !important;
+}
+div.clc-jobs-multi.tag-themed.csharp {
+    background-color: #222 !important;
+    background-image: none; !important
+}
+div.clc-jobs-multi.tag-themed span.header-tag {
+    background-color: #333 !important;
+    color: #8CF !important;
+}
+div.clc-jobs-multi.orange {
+    background-color: #531 !important;
+}
+div.clc-jobs-multi>.middle {
+    background-color: #444 !important;
+}
+div.clc-jobs-multi>.middle>ul>li.clc-dismissable .title {
+    color: #AFA !important;
+}
+div.clc-jobs-multi>.middle>ul .job-wrap .company {
+    color: #EEE !important;
+}
+div.clc-jobs-multi>.middle>ul .job-wrap .location {
+    color: #DDD !important;
+}
+div.clc-jobs-multi>.middle>ul .job-wrap .opts .relocate {
+    color: #AEF !important;
+}
+div.clc-jobs-multi>.middle>ul .job-wrap span.post-tag {
+    background-color: #333 !important;
+    color: #AEF !important;
+    border-color: #555 !important;
+}
+.show-votes .sidebar-linked .spacer>a:first-child .answer-votes, .show-votes .sidebar-related .spacer>a:first-child .answer-votes {
+    background-color: #555 !important;
+    color: #EEE !important;
+}
+.jobalert, .matchesalert {
+    background-color: #444 !important;
+    border-color: #555 !important;
+    color: #EEE !important;
+}
+.listResults .-item.-job {
+    border-color: #777 !important;
+}
+#sub-navs>a, #sub-navs .menu-item {
+    border-color: #555 !important;
+}
+.sidebar #advanced-search-tips .expand {
+    background-color: #222 !important;
+    border-color: #555 !important;
+}
+.sidebar ._border, .companyPreview {
+    border-color: #777 !important;
+}
+.companyPreview>header {
+    background-color: #222 !important;
+}
+.h1._muted, .h2._muted, .h3._muted, .h4._muted, .h5._muted, .h6._muted, .label._muted, .text._muted, h1._muted, h2._muted, h3._muted, h4._muted, h5._muted, h6._muted, label._muted, p._muted {
+    color: #BBB !important;
+}
+.companyPreview .-details._jobs .-location {
+    color: #AAA !important;
+}
+.companyPreview .-logo>img {
+    background-color: #222 !important;
+    border-color: #555 !important;
+}
+.post-text hr, .wmd-preview hr {
+    background-color: #555 !important;
+}
+.snippet-code {
+    border-color: #555 !important;
+}
+.snippet-code .snippet-result .snippet-result-code {
+    border-color: #555 !important;
+}
+.inputOptionsPanel>div {
+    background-color: #444 !important;
+    border-color: #555 !important;
+}
+input[type="text"]::-webkit-input-placeholder {
+    color:    #888 !important;
+}
+input[type="text"], input[type="password"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="datetime"], textarea, select {
+    background-color: #2E2E2E !important;
+    border-color: #555 !important;
+    color: #CCC !important;
+}
+input[type="submit"].btn-secondary, input[type="button"].btn-secondary, button.btn-secondary, .btn-secondary, .privacy-switch-btn {
+    background-color: #444 !important;
+    border-color: #555 !important;
+    box-shadow: inset 0 1px 0 #777 !important;
+    color: #BBB !important;
+}
+.item-multiplier-count, .stats-row, .stats-row a, .stats-row a:visited {
+    color: #BBB !important;
+}
+.excerpt, .stats-row, .page-numbers {
+    color: #999 !important;
+    border-color: #555 !important;
+}
+.chosen-container.-tags>.chosen-choices>.search-choice, .post-tag, .post-tag:visited {
+    border-color: #555 !important;
+}
+.badge-tag {
+    color: #FFD !important;
+    background-color: #222 !important;
+    border-color: #555 !important;
+}
+.badges-page .general .badge-hierarchy {
+    border-color: #777 !important;
+}
+.newuser {
+    background-color: #222 !important;
+    border-color: #555 !important;
+}
+.tag-editor {
+    background-color: #1E1E1E !important;
+    border-color: #555 !important;
+}
+.about-page .new-about-content-page h2.about-title {
+    color: #DDD !important;
+    text-shadow: 0 1px 0 #555 !important;
+}
+.about-page .new-about-content-page .qa-block, .about-page .new-about-content-page .content-block {
+    background-color: #444 !important;
+    border-color: #555 !important;
+}
+.salary-calculator-calculator {
+    background-color: #333 !important;
+    color: #FFF !important;
+    border-color: #555 !important;
+}
+.calculator-header {
+    color: #FFF !important;
+}
+.salary-results {
+    background-color: #444 !important;
+    border-color: #555 !important;
+}
+.salary-value {
+    color: #FED !important;
+}
+.salary-input-select {
+    background-color: #222 !important;
+    color: #FFF !important;
+    border-color: #555 !important;
+}
+.salary-breakdown, .salary-breakdown-row {
+    border-color: #777 !important;
+}
+#logos img {
+    border-color: #555 !important;
+}
+.question-summary {
+    border-color: #777 !important;
+}
+.question-status {
+    background-color: #444 !important;
+}
+#tabs #tab-switch {
+    border-color: #555 !important;
+    color: #DDD !important;
+}
+.tagged-interesting {
+    background-color: #222 !important;
+}
+.user-page .card, .user-show-new .card {
+    background-color: #222 !important;
+    border-color: #555 !important;
+}
+.user-page .card.rep-card .rep, .user-show-new .card.rep-card .rep {
+    color: #FFF !important;
+}
+.label-uppercase {
+    color: #DDD !important;
+}
+.user-page .card.rep-card .graph, .user-show-new .card.rep-card .graph {
+    background-color: #CCC !important;
+    margin-left: 5px !important;
+    outline: solid 5px #BBB !important;
+}
+.user-page .card.impact-card hr, .user-show-new .card.impact-card hr {
+    background-color: #777 !important;
+}
+.user-show-new .user-panel .subheader {
+    border-color: #777 !important;
+}
+.answer-votes {
+    color: #8CF !important;
+}
+.votes-cast-stats th {
+    color: #CCC !important;
+}
+.votes-cast-stats td {
+    color: #8CF !important;
+}
+.votes-cast-stats td.desc {
+    color: #CCC !important;
+}
+.subtabs a.youarehere, .filter a.youarehere, .subtabs a.active, .filter a.active {
+    color: #FFF !important;
+}
+.subtabs a, .filter a {
+    color: #AAA !important;
+}
+.rep-card .progress-bar .bar, .progress-bar.green .bar, .rep-card .progress-bar-large .bar, .progress-bar-large.green .bar,
+.badges-card .progress-bar.badge-1 .bar, .all-badge-progress .progress-bar.badge-1 .bar, .badges-card .progress-bar-large.badge-1 .bar, .all-badge-progress .progress-bar-large.badge-1 .bar {
+    border-color: #777 !important;
+}
+.badge1-alternate, .badge2-alternate, .badge-how-to, .badge3-alternate {
+    background-color: #444 !important;
+    border-color: #777 !important;
+}
+.badge1-alternate .badgecount, .badge2-alternate .badgecount, .badge3-alternate .badgecount, .badge-how-to .badgecount {
+    color: #FFF !important;
+}
+.user-show-new .answer-summary, .user-show-new .question-summary {
+    border-color: #777 !important;
+}
+.user-show-new .history-table>tbody>tr {
+    border-color: #777 !important;
+}
+#tabs a.external, .tabs a.external, .newnav .tabs-list-container .tabs-list .intellitab a.external {
+    color: #ADD !important;
+}
+.external>.-icon {
+    -webkit-filter: brightness(200%) saturate(20%) !important;
+}
+#side-menu ul li>a {
+    color: #DDD !important;
+}
+.double-input .separator {
+    background-color: #333 !important;
+    border-color: #777 !important;
+}
+.inner-container {
+    border-color: #777 !important;
+}
+.switcher {
+    border-color: #777 !important;
+}
+.switcher label {
+    border-color: #555 !important;
+    background-color: #444 !important;
+    color: #BBB !important;
+}
+.switcher input[type="radio"]:checked+label {
+    background-color: #222 !important;
+    color: #FFF !important;
+}
+.narrow .mini-counts {
+    color: #EEE !important;
+}
+.narrow .votes, .narrow .status, .narrow .views {
+    color: #BBB !important;
+}
+.user-page .subheader.reloaded .mini-avatar .name {
+    color: #FFF !important;
+}
+.user-show-new .user-tab .subheader .count {
+    color: #BBB !important;
+}
+.subheader h1 {
+    color: #DDD !important;
+}
+.user-show-new .highlight-row {
+    background-color: #222 !important;
+}
+.user-show-new .user-rep-full .rep-down {
+    color: salmon !important;
+}
+.user-page .card.rep-card .graph-col .values, .user-show-new .card.rep-card .graph-col .values, .user-page .card.rep-card .graph-col .legend, .user-show-new .card.rep-card .graph-col .legend {
+    color: #000 !important;
+}
+.user-page .card .subtitle, .user-show-new .card .subtitle {
+    color: #BBB !important;
+}
+.user-page .card.impact-card .ppl-reached .label, .user-show-new .card.impact-card .ppl-reached .label {
+    color: #BBB !important;
+}
+.user-page .card.impact-card .number a, .user-show-new .card.impact-card .number a {
+    color: #BBB !important;
+}
+.about-page .new-about-content-page .user-info-rep {
+    background-color: #444 !important;
+    border-color: #555 !important;
+}
+.about-page .new-about-content-page .user-details {
+    color: #DDD !important;
+}
+.about-page .new-about-content-page .rep-block {
+    color: #BBB !important;
+}
+#herobox.alternate {
+    background-color: #444 !important;
+    color: #FFF !important;
+    border-bottom-color: #158 !important;
+}
+.help-center .help-category-box h3 {
+    border-color: #777 !important;
+}
+.company-team-page .navigation .nav-link.highlighted {
+    color: #FFF !important;
+}
+.company-team-page .employee .job-title {
+    color: #BBB !important;
+}
+.section h2 {
+    color: #DDD !important;
+}
+.listResults .-item._highlighted {
+    background-color: #222 !important;
+}
+.listResults .-title>.link, .listResults .-title>a, .listResults .-title>a:link, .listResults .-title>h1>.link, .listResults .-title>h1>a, .listResults .-title>h1>a:link {
+    color: #8CF !important;
+}
+.listResults .-item p.text._muted {
+    color: #BBB !important;
+}
+.listResults .-item p.posted.bottom {
+    color: #BBB !important;
+}
+.jobsfooter .footerContent>a {
+    color: #BBB !important;
+    border-color: #555 !important;
+}
+input[type="text"]:focus {
+    background-color: #1E1E1E !important;
+}
+.label, label {
+    color: #AAA !important;
+}
+.wmd-button-bar {
+    border-color: #555 !important;
+}
+.wmd-button>span {
+    -webkit-filter: invert(75%) !important;
+}
+.grippie {
+    border-color: #555 !important;
+    background-color: #444 !important;
+}
+.module.community-bulletin {
+    background-color: #444 !important;
+    border-color: #555 !important;
+}
+.module.community-bulletin .bulletin-item-type {
+    color: #8CF !important;
+}
+.favicon {
+    -webkit-filter: invert(100%) !important;
+}
+pre {
+    background-color: #1E1E1E !important;
+}
+.com {
+    color: #57A64A !important;
+}
+.kwd, .dec {
+    color: #569CD6 !important;
+}
+.typ {
+    color: #4EC9B0 !important;
+}
+.pun, .pln {
+    color: #DCDCDC !important;
+}
+.str, .lit, .tag {
+    color: #D69D85 !important;
+}

@@ -1,0 +1,30 @@
+*,div,pre,textarea,body,input,td,tr,p {
+    background-color: #151515 !important;
+    background-image: none !important;
+    color: #bbbbbb !important;
+}
+h1,h2,h3,h4 {
+    background-color: #151515 !important;
+    color: #b8ddea !important;
+}
+a {
+    color: #70e070 !important;
+}
+a:hover,a:focus {
+    color: #7070e0 !important;
+}
+a:visited {
+    color: #e07070 !important;
+}
+img {
+    opacity: .5;
+}
+img:hover {
+    opacity: 1;
+}
+#luakit_follow_overlay .hint_overlay.hint_selected {
+    background-color: #00ff00 !important;
+}
+#luakit_follow_overlay .hint_overlay {
+    background-color: #ffff99 !important;
+}
