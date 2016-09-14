@@ -25,6 +25,10 @@ set shiftwidth=4
 
 colors default
 
+" Benutze immer das Clipboard. Hiermit ist der direkte Zugriff
+" auf das Clipboard über (y)ank und (p)aste möglich.
+set clipboard+=unnamedplus
+
 highlight DiffAdd    cterm=none ctermbg=28  ctermfg=white
 highlight DiffChange cterm=none ctermbg=33  ctermfg=black
 highlight DiffText   cterm=none ctermbg=191 ctermfg=black
