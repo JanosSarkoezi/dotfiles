@@ -33,3 +33,5 @@ highlight DiffAdd    cterm=none ctermbg=28  ctermfg=white
 highlight DiffChange cterm=none ctermbg=33  ctermfg=black
 highlight DiffText   cterm=none ctermbg=191 ctermfg=black
 highlight DiffDelete cterm=none ctermbg=160 ctermfg=black
+
+highlight Search cterm=none ctermbg=yellow ctermfg=black
