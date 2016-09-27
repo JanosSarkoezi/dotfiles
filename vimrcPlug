@@ -9,5 +9,6 @@ Plug 'epeli/slimux'
 Plug 'chriskempson/base16-vim'
 Plug 'tpope/vim-fugitive'
 Plug 'junegunn/gv.vim'
+Plug 'vim-airline/vim-airline'
 
 call plug#end()
