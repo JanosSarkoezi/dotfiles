@@ -176,6 +176,7 @@ exec xset -dpms s off
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
+for_window [class="Onboard" instance="onboard"] floating enable
 
 set $mode_launcher Launch: [l]ock [e]xit [s]hutdown [r]eboot
 bindsym $mod+x mode "$mode_launcher"
@@ -187,5 +188,16 @@ mode "$mode_launcher" {
     bindsym r exec systemctl reboot, mode "default"
 
     bindsym Esc mode "default"
+    bindsym Return mode "default"
+}
+
+set $mode_keyboard Keyboard: [d]e [g]b [u]s
+bindsym $mod+k mode "$mode_keyboard"
+
+mode "$mode_keyboard" {
+    bindsym d exec setxkbmap de, mode "default"
+    bindsym g exec setxkbmap gb, mode "default"
+    bindsym u exec setxkbmap us, mode "default"
+
     bindsym Return mode "default"
 }
