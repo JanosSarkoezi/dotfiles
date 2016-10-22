@@ -99,10 +99,10 @@ spell_slot ^= passage of golubria : gGP
 
 ##### 3-m       Inscriptions ##########################
 #
-autoinscribe += potion.*(mutation|heal|curing|haste|resist):!q
+# autoinscribe += potion.*(mutation|heal|curing|haste|resist):!q
 autoinscribe += potion.*blood:@q1
 
-autoinscribe += scroll.*(tele|blink|fog|holy|torment|fear):!r
+# autoinscribe += scroll.*(tele|blink|fog|holy|torment|fear):!r
 autoinscribe += scroll.*identify:@r1
 autoinscribe += scroll.*teleport:@r2
 autoinscribe += scroll.*recharg:@r3
