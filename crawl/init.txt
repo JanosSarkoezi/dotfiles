@@ -34,7 +34,7 @@ drop_filter += skeleton, corpse, useless_item
 
 ##### 3-h       Command Enhancements ##################
 #
-confirm_butcher        = never 
+confirm_butcher        = never
 easy_eat_chunks        = true
 auto_eat_chunks        = true
 auto_drop_chunks       = rotten
@@ -42,6 +42,7 @@ easy_quit_item_prompts = true
 autofight_caught       = true
 warn_hatches           = true
 autofight_stop         = 50
+auto_butcher           = true
 
 ##### 3-i       Messages and Display Enhancements #####
 #

@@ -1,0 +1,677 @@
+bindkey = [z] CMD_MAP_MOVE_UP_LEFT
+bindkey = [Z] CMD_MAP_JUMP_UP_LEFT
+
+bindkey = [z] CMD_MOVE_UP_LEFT
+bindkey = [Z] CMD_RUN_UP_LEFT
+
+bindkey = [z] CMD_TARGET_UP_LEFT
+bindkey = [Z] CMD_TARGET_DIR_UP_LEFT
+
+bindkey = [y] CMD_CAST_SPELL
+bindkey = [Y] CMD_FORCE_CAST_SPELL
+
+##############
+# Autopickup #
+##############
+
+pickup_mode = true
+default_friendly_pickup = none
+autopickup = $?!+"/%|
+
+ae := autopickup_exceptions
+ae =
+
+ae += useless_item
+ae += dangerous_item
+ae += evil_item
+ae += >amulet of .*
+ae += >ring of (see invisible|protection from.*|sustenance|flight|teleport control|teleportation|wizardry|poison resistance|life protection|invisibility|ice|fire|positive energy|sustain.*|regeneration|magic|stealth)
+ae += book of.*
+ae += potion of (flight|berserk rage|lignification)
+
+: if you.race() ~= "Vampire" then
+ae += potion of .*blood
+: end
+
+ae += >wand of (confusion|random effects|enslavement|flame|frost|magic darts|paralysis|polymorph|slowing|cold|fire|draining|lightning)
+ae += <rods
+ae += >rod of striking
+ae += >staff of .*
+ae += <Rune of Zot
+ae += <Tomahawks? of Dispersal
+
+##########
+# Travel #
+##########
+
+travel_delay = -1
+explore_delay = -1
+rest_delay = -1
+
+auto_sacrifice = true
+sacrifice_before_explore = true
+
+show_travel_trail = true
+explore_stop = items,greedy_items,greedy_pickup,greedy_pickup_gold
+explore_stop += greedy_visited_item_stack,stairs,shops,altars,gates
+explore_stop += greedy_sacrificeable
+
+stop := runrest_stop_message
+stop =
+ignore := runrest_ignore_message
+ignore =
+
+# Annoyances
+ignore += Jiyva gurgles merrily
+ignore += Jiyva appreciates your sacrifice
+ignore += Jiyva says: Divide and consume
+ignore += You hear.*splatter
+ignore += You feel.*sick
+ignore += disappears in a puff of smoke
+ignore += engulfed in a cloud of smoke
+ignore += standing in the rain
+ignore += engulfed in white fluffiness
+ignore += safely over a trap
+ignore += A.*toadstool withers and dies
+ignore += toadstools? grow
+ignore += You walk carefully through the
+ignore += grinding sound
+ignore += chunks of flesh in your inventory.*rotted away
+ignore += lightning rod has recharged
+ignore += your breath back
+
+runrest_ignore_poison  = 2:10
+runrest_ignore_monster += butterfly:1
+
+# Bad things
+stop += found.*trap
+stop += You fall through a shaft
+stop += An alarm trap emits a blaring wail
+stop += (blundered into a|invokes the power of) Zot
+stop += A huge blade swings out and slices into you
+stop += sense of stasis
+stop += flesh start
+stop += (starving|devoid of blood)
+stop += wrath finds you
+stop += lose consciousness
+
+# Expiring effects
+stop += You feel yourself slow down
+stop += less insulated
+stop += You are starting to lose your buoyancy
+stop += You lose control over your flight
+stop += Your hearing returns
+stop += Your transformation is almost over
+stop += back to life
+stop += You flicker.*
+stop += uncertain
+stop += time is quickly running out
+stop += life is in your own hands
+stop += is no longer charmed
+
+: if you.race() == "Ghoul" then
+stop += smell.*(rott(ing|en)|decay)
+stop += something tasty in your inventory
+: end
+
+:if you.god() == "Xom" then
+stop += god:
+:else
+ignore += god:
+:end
+
+ignore += pray:
+ignore += talk:
+ignore += talk_visual:
+ignore += friend_spell:
+ignore += friend_enchant:
+ignore += friend_action:
+ignore += sound:
+
+###########
+# Prompts #
+###########
+
+more := force_more_message
+more =
+
+# Important features
+: if you.god() == "Ashenzari" then
+more += You have a vision of.*gates?
+: else
+more += interdimensional caravan
+more += distant snort
+more += roar of battle
+more += wave of frost
+more += hiss of flowing sand
+more += sound of rushing water
+more += oppressive heat about you
+more += crackle of arcane power
+more += Found.*out.*Abyss
+: end
+more += Found .* abyssal rune of Zot
+more += You feel a terrible weight on your shoulders
+more += .* resides here
+
+# Interrupts
+more += You don't.* that spell
+more += You fail to use your ability
+more += You miscast Controlled Blink
+more += You can't (read|drink|do) that
+more += That item cannot be evoked
+more += This wand has no charges
+more += You are held in a net
+more += You have disarmed
+more += You don't have any such object
+more += do not work when you're silenced
+more += You can't unwield
+more += enough magic points
+more += You feel your control is inadequate
+
+# Bad things
+more += Your surroundings flicker
+more += sense of stasis
+more += Your amulet of stasis
+more += You cannot teleport right now
+more += The writing blurs in front of your eyes
+more += You fall through a shaft
+more += A huge blade swings out and slices into you
+more += (blundered into a|invokes the power of) Zot
+more += Ouch! That really hurt!
+more += dispelling energy hits you
+more += You convulse.*
+more += You are blasted by holy energy!
+more += You are (blasted|electrocuted)!
+more += You are.*(confused|poisoned)
+more += flesh start
+more += (starving|devoid of blood)
+more += god:(sends|finds|silent|anger)
+more += You feel a surge of divine spite
+more += lose consciousness
+more += You are too injured to fight blindly
+more += calcifying dust hits
+more += Space warps.*around you
+more += Space bends around you
+more += hits you.*distortion
+more += watched by something
+#more += You (shout|yell|scream) .*
+#more += A (shout|yell|scream) .*
+more += ^(It|Something).*you
+more += Your limbs have turned to stone
+more += You are slowing down
+more += .*LOW HITPOINT WARNING.*
+more += warns you.*of distortion
+
+# Hell effects
+more += hell_effect:
+
+# Expiring effects
+more += You feel yourself slow down
+more += less insulated
+more += You are starting to lose your buoyancy
+more += You lose control over your flight
+more += Your hearing returns
+more += Your transformation is almost over
+more += You have a feeling this form
+more += You feel yourself come back to life
+more += uncertain
+more += time is quickly running out
+more += life is in your own hands
+more += is no longer charmed
+more += shroud falls apart
+more += You start to feel a little slower
+more += You flicker.*
+
+# Uniques
+force_more_message += 27-headed.*comes? into view.
+force_more_message += Agnes.*comes? into view.
+force_more_message += Aizul.*comes? into view.
+force_more_message += Antaeus.*comes? into view.
+force_more_message += Arachne.*comes? into view.
+force_more_message += Asmodeus.*comes? into view.
+force_more_message += Asterion.*comes? into view.
+force_more_message += Azrael.*comes? into view.
+force_more_message += Blork the orc.*comes? into view.
+force_more_message += Boris.*comes? into view.
+force_more_message += Cerebov.*comes? into view.
+force_more_message += Crazy Yiuf.*comes? into view.
+force_more_message += Dispater.*comes? into view.
+force_more_message += Dissolution.*comes? into view.
+force_more_message += Donald.*comes? into view.
+force_more_message += Dowan.*comes? into view.
+force_more_message += Duvessa.*comes? into view.
+force_more_message += Edmund.*comes? into view.
+force_more_message += Enchantress.*comes? into view.
+force_more_message += Ereshkigal.*comes? into view.
+force_more_message += Erica.*comes? into view.
+force_more_message += Erolcha.*comes? into view.
+force_more_message += Eustachio.*comes? into view.
+force_more_message += Fannar.*comes? into view.
+force_more_message += Frances.*comes? into view.
+force_more_message += Francis.*comes? into view.
+force_more_message += Frederick.*comes? into view.
+force_more_message += Gastronok.*comes? into view.
+force_more_message += Geryon.*comes? into view.
+force_more_message += Gloorx Vloq.*comes? into view.
+force_more_message += Grinder.*comes? into view.
+force_more_message += Grum.*comes? into view.
+force_more_message += Harold.*comes? into view.
+force_more_message += Ignacio.*comes? into view.
+force_more_message += Ijyb.*comes? into view.
+force_more_message += Ilsuiw.*comes? into view.
+force_more_message += Jorgrun.*comes? into view.
+force_more_message += Jory.*comes? into view.
+force_more_message += Jessica.*comes? into view.
+force_more_message += Joseph.*comes? into view.
+force_more_message += Josephine.*comes? into view.
+force_more_message += Jozef.*comes? into view.
+force_more_message += Khufu.*comes? into view.
+force_more_message += Kirke.*comes? into view.
+force_more_message += Lamia.*comes? into view.
+force_more_message += Lom Lobon.*comes? into view.
+force_more_message += Louise.*comes? into view.
+force_more_message += Mara.*comes? into view.
+force_more_message += Margery.*comes? into view.
+force_more_message += Maud.*comes? into view.
+force_more_message += Maurice.*comes? into view.
+force_more_message += Menkaure.*comes? into view.
+force_more_message += Mennas.*comes? into view.
+force_more_message += Mnoleg.*comes? into view.
+force_more_message += Murray.*comes? into view.
+force_more_message += Natasha.*comes? into view.
+force_more_message += Nergalle.*comes? into view.
+force_more_message += Nessos.*comes? into view.
+force_more_message += Nikola.*comes? into view.
+force_more_message += Norris.*comes? into view.
+force_more_message += Pikel.*comes? into view.
+force_more_message += Polyphemus.*comes? into view.
+force_more_message += Prince Ribbit.*comes? into view.
+force_more_message += Psyche.*comes? into view.
+force_more_message += Purgy.*comes? into view.
+force_more_message += Roxanne.*comes? into view.
+force_more_message += Rupert.*comes? into view.
+force_more_message += Saint Roka.*comes? into view.
+force_more_message += Sigmund.*comes? into view.
+force_more_message += Snorg.*comes? into view.
+force_more_message += Sojobo.*comes? into view.
+force_more_message += Sonja.*comes? into view.
+force_more_message += Terence.*comes? into view.
+force_more_message += The Lernaean hydra.*comes? into view.
+force_more_message += The royal jelly.*comes? into view.
+force_more_message += The Serpent of Hell.*comes? into view.
+force_more_message += Tiamat.*comes? into view.
+force_more_message += Urug.*comes? into view.
+force_more_message += Vashnia.*comes? into view.
+force_more_message += Wiglaf.*comes? into view.
+force_more_message += Xtahua.*comes? into view.
+force_more_message += .*'s ghost.* comes? into view
+force_more_message += .*Ancient Lich.*comes? into view.
+force_more_message += .*Orb of Fire.*comes? into view.
+force_more_message += .*Fiend.*comes? into view.
+force_more_message += .*Hellion.*comes? into view.
+force_more_message += .*Tormentor.*comes? into view.
+force_more_message += .*Hell Sentinel.*comes? into view.
+force_more_message += .*Executioner.*comes? into view.
+force_more_message += .*Neqoxec.*comes? into view.
+force_more_message += .*Cacodemon.*comes? into view.
+force_more_message += .*Shining Eye.*comes? into view.
+force_more_message += .*Giant Eyeball.*comes? into view.
+force_more_message += .*Greater Mummy.*comes? into view.
+force_more_message += .*Mummy Priest.*comes? into view.
+force_more_message += .*Curse Toe.*comes? into view.
+force_more_message += .*Curse Skull.*comes? into view.
+
+# Others
+more += You have reached level
+more += You have finished your manual of
+more += Your scales start
+more += You feel monstrous
+more += Space.*you
+more += Jiyva alters your body
+: if you.god() == "Xom" then
+more += god:
+: end
+more += zaps a wand
+more += is unaffected
+
+#############
+# Interface #
+#############
+
+remember_name = false
+equip_unequip = true
+allow_self_target = no
+easy_confirm = all
+confirm_butcher = never
+auto_eat_chunks = true
+auto_drop_chunks = rotten
+easy_eat_gourmand = true
+easy_eat_contaminated = true
+autofight_stop = 60
+autofight_throw_nomove = false
+hp_warning = 50
+hp_colour = 100:green, 99:lightgrey, 75:yellow, 50:lightred, 25:red
+mp_colour = 100:green, 99:lightgrey, 75:yellow, 50:lightred, 25:red
+stat_colour = 3:red, 7:lightred
+show_gold_turns = true
+show_game_turns = true
+default_manual_training = true
+skill_focus = false
+clear_messages = false
+
+# Spellcasting spam reduction by monqy
+{
+local function generic_cast_spell(cmd)
+  crawl.mpr('<cyan>Cast which spell?</cyan>')
+  crawl.flush_prev_message()
+  crawl.process_keys(cmd)
+end
+
+function cast_spell()
+  generic_cast_spell('z')
+end
+
+function force_cast_spell()
+  generic_cast_spell('Z')
+end
+}
+
+###################
+# Message colours #
+###################
+
+$inedible     := darkgrey
+$evil         := red
+$preferred    := yellow
+$rot-inducing := lightred
+$mutagenic    := magenta
+$dangerous    := magenta
+$poisonous    := lightgreen
+$contaminated := brown
+
+### standard colours to be used for message highlighting
+$danger   := lightred
+$warning  := yellow
+$boring   := darkgrey
+$item_dmg := $danger
+
+msc := message_colour
+msc =
+menu := menu_colour
+menu =
+
+# Allies
+msc += mute:returns to your side
+msc += mute:a demon appears
+msc += mute:puff of smoke
+msc += mute:carefully avoids
+msc += mute:is recalled
+msc += mute:wall.*burn.*your
+msc += mute:dissolves? into (sparkling lights|shadows)
+msc += mute:crumbles away
+msc += mute:you swap places
+msc += mute:your.*(looks stronger|shudders|resists)
+msc += mute:(stumbles backwards|holds.*ground)
+msc += mute:(something|your).*(misses|does no damage)
+msc += mute:your.*(blinks|safely over|gestures)
+msc += mute:(phases out.*|misses) (your|something).*
+msc += mute:your.*but does no damage
+msc += mute:your.*(picks up|drops)
+msc += mute:your.*basks in the mutagenic energy
+
+msc += mute:constricts?.*no damage
+
+# Prayer
+channel.pray += mute
+
+# Jiyva
+: if you.god() == "Jiyva" then
+msc += mute:slurping|squelching
+msc += mute:splits in two
+msc += mute:You feel.*(less hungry|power returning|better)
+: end
+
+# Interface
+msc += mute:melds.*
+msc += mute:Switching to.*
+msc += mute:Switching back.*
+
+# Other
+msc += mute:This raw flesh tastes terrible
+msc += mute:melds into your body
+msc += mute:begins to bleed from.*wounds
+msc += mute:writhes in agony as.*flesh
+msc += mute:An air elemental.*itself.*the air
+msc += mute:You feel a.*surge of power
+msc += mute:Your legs become a tail as you enter the water
+msc += mute:You cannot train any new skill
+
+# Default colours
+msc += $danger:drains you
+msc += $danger:feel drained
+msc += $danger:strangely unstable
+msc += $danger:curare-tipped.*hits you
+msc += $danger:Space warps.* around you
+msc += $danger:Space bends around you
+msc += $danger:sense of stasis
+msc += $danger:clumsily bash
+msc += $danger:goes berserk
+msc += $danger:Forgetting.* will destroy the book
+msc += $danger:The blast of calcifying dust hits you
+msc += $danger:You are engulfed in calcifying dust
+msc += $danger:is moving more slowly
+msc += $danger:^It .* you
+msc += $danger:You block its attack
+msc += $danger:constricts you
+msc += $danger:you convulse
+msc += $danger:You feel a build-up of mutagenic energy
+
+msc += $item_dmg:acid corrodes
+msc += $item_dmg:catch(es)? fire
+msc += $item_dmg:freezes? and shatters?
+msc += $item_dmg:covered with spores
+msc += $item_dmg:devours some of your food
+msc += $item_dmg:rots? away
+
+msc += $warning:ticking.*clock
+msc += $warning:dying ticks
+msc += $warning:distant snort
+msc += $warning:odd grinding sound
+msc += $warning:creaking of ancient gears
+msc += $warning:floor suddenly vibrates
+msc += $warning:a sudden draft
+msc += $warning:coins.*counted
+msc += $warning:tolling.*bell
+msc += $warning:roar of battle
+msc += $warning:creaking.*oriflamme
+msc += $warning:oriflamme is probably
+msc += $warning:wave of frost
+msc += $warning:crackling.*melting
+msc += $warning:hiss.*sand
+msc += $warning:sound.*rushing water
+msc += $warning:rusting.*drain
+msc += $warning:drain falling apart
+msc += $warning:oppressive heat
+msc += $warning:rumble.*avalanche of rocks
+msc += $warning:crackle.*arcane power
+msc += $warning:crackle.*magical portal
+msc += $warning:fails to return
+msc += $warning:no longer ripe
+
+msc += $boring:You start (resting|waiting)
+msc += $boring:Unknown command
+msc += $boring:but (do no|doesn't do any) damage
+msc += $boring:(prevent|prevents) you from hitting
+
+menu += inventory:white:\w \+\s
+menu += inventory:white:\w \#\s
+menu += darkgrey:(melded)
+menu += darkgrey:.*useless_item.*
+menu += red:.*evil_item.*
+menu += lightred: cursed
+menu += inventory:lightgreen:.*equipped.*
+menu += lightmagenta:.*misc.*rune( of Zot)?
+menu += lightmagenta:.*orb.*Zot
+menu += white:.*artefact.*
+menu += lightblue:^unidentified .*(potion|scroll|wand|jewellery).*
+menu += lightblue:^unidentified .*weapon.*(runed|glowing)
+menu += lightblue:^unidentified .*armour.*(runed|glowing)
+menu += lightblue:^unidentified .*armour.*(embroidered|shiny|dyed)
+menu += yellow:heal wounds
+
+# Food
+menu += $inedible:.*inedible.*
+menu += $evil:.*evil_eating.*
+menu += $rot-inducing:.*rot-inducing.*
+menu += $mutagenic:.*mutagenic.*
+menu += $poisonous:.*poisonous.*
+menu += $contaminated:.*contaminated.*
+
+####################
+# Autoinscriptions #
+####################
+
+autoinscribe += (bad|dangerous)_item.*potion:!q
+autoinscribe += (bad|dangerous)_item.*scroll:!r
+autoinscribe += of faith:!P
+autoinscribe += rod of:!a
+autoinscribe += lightning rod:!a
+autoinscribe += manual of:!d
+autoinscribe += staff of (Wucad Mu|energy|channeling|wizardry|power):!a
+autoinscribe += ambrosia:!e
+autoinscribe += of identify:@*1
+
+: if you.race() == "Vampire" then
+autoinscribe += of blood:@*2
+: end
+
+: if you.god() == "Fedhas" then
+autoinscribe += fruit:!e
+: end
+
+#########
+# Notes #
+#########
+
+dump_message_count = 50
+dump_order  = header,hiscore,stats,misc,mutations,skills,spells,inventory
+dump_order += screenshot,monlist,messages,action_counts,vaults,notes,kills
+note_hp_percent = 30
+ood_interesting = 6
+note_chat_messages = true
+note_all_skill_levels = true
+note_all_spells = true
+note_items =
+note_items += of Zot
+note_messages =
+note_messages += Your scales start
+note_messages += protects you from harm
+note_messages += You fall through a shaft
+note_monsters =
+note_monsters += orb of fire, ancient lich, electric golem
+
+###############
+# Spell slots #
+###############
+
+# Utility spells
+spell_slot += Dispel Undead:q
+spell_slot += Alistair's Intoxication:Q
+spell_slot += Abjuration:w
+spell_slot += Mass Abjuration:W
+spell_slot += Apportation:e
+spell_slot += Recall:r
+spell_slot += Summon Butterflies:R
+spell_slot += Control Teleport:t
+spell_slot += Ozocubu's Armour:aA
+spell_slot += Stoneskin:aA
+spell_slot += Phase Shift:aA
+spell_slot += Shroud of Golubria:aA
+spell_slot += Swiftness:s
+spell_slot += Repel Missiles:d
+spell_slot += Deflect Missiles:d
+spell_slot += Darkness:D
+spell_slot += Flight:f
+spell_slot += Ring of Flames:F
+spell_slot += Regeneration:g
+spell_slot += Silence:G
+spell_slot += Haste:h
+spell_slot += Disjunction:H
+spell_slot += Invisibility:j
+spell_slot += Death's Door:J
+spell_slot += Borgnjor's Revivification:L
+spell_slot += Blink:b
+spell_slot += Controlled Blink:B
+spell_slot += Sublimation of Blood:n
+spell_slot += Necromutation:M
+
+# Transformations
+spell_slot += Beastly Appendage:zxc
+spell_slot += Spider Form:zxc
+spell_slot += Ice Form:zxc
+spell_slot += Blade Hands:zxc
+spell_slot += Statue Form:XC
+spell_slot += Dragon Form:XC
+
+# Low-level spells
+spell_slot += Freeze:z
+spell_slot += Magic Dart:z
+spell_slot += Flame Tongue:z
+spell_slot += Pain:z
+spell_slot += Shock:z
+spell_slot += Sandblast:z
+spell_slot += Sting:z
+spell_slot += Ensorcelled Hibernation:zx
+spell_slot += Corona:z
+spell_slot += Infusion:z
+spell_slot += Confusing Touch:Z
+spell_slot += Confuse:x
+spell_slot += Slow:x
+spell_slot += Vampiric Draining:x
+spell_slot += Song of Slaying:x
+spell_slot += Summon Small Mammal:zx
+spell_slot += Throw Frost:zx
+spell_slot += Throw Flame:zx
+spell_slot += Force Lance:zx
+spell_slot += Call Imp:zx
+spell_slot += Static Discharge:ZX
+spell_slot += Iskenderun's Battlesphere:ZX
+spell_slot += Mephitic Cloud:cC
+spell_slot += Spectral Weapon:c
+
+# Mid-level spells
+spell_slot += Stone Arrow:zxcv
+spell_slot += Dazzling Spray:zxcv
+spell_slot += Iskenderun's Mystic Blast:zxcv
+spell_slot += Sticky Flame:zxcv
+spell_slot += Throw Icicle:zxcv
+spell_slot += Venom Bolt:zxcv
+spell_slot += Summon Scorpions:zxc
+spell_slot += Summon Ice Beast:zxc
+spell_slot += Summon Demon:zxc
+spell_slot += Airstrike:zxc
+spell_slot += Agony:zxc
+spell_slot += Fulminant Prism:XC
+spell_slot += Lee's Rapid Deconstruction:XC
+spell_slot += Poisonous Cloud:XC
+spell_slot += Freezing Cloud:XC
+spell_slot += Ozocubu's Refrigeration:ZX
+spell_slot += Control Undead:Z
+spell_slot += Animate Dead:XC
+
+# High-level spells
+spell_slot += Lightning Bolt:xcv
+spell_slot += ^Fireball:xcv
+spell_slot += Bolt of:xcv
+spell_slot += Iron Shot:xcv
+spell_slot += Poison Arrow:xcv
+spell_slot += Orb of Destruction:xcv
+spell_slot += Lehudib's Crystal Spear:xcv
+spell_slot += Chain Lightning:XCV
+spell_slot += Fire Storm:V
+spell_slot += Glaciate:V
+spell_slot += Shatter:V
+spell_slot += Tornado:V
+
+# Default letters
+spell_slot += .*:yuiopYUIOP
