@@ -2,13 +2,14 @@ call plug#begin('~/.vim/bundle')
 
 set rtp+=~/.fzf
 " Plug 'https://github.com/junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'https://github.com/junegunn/fzf.vim'
-Plug 'https://github.com/easymotion/vim-easymotion'
-Plug 'https://github.com/danchoi/elinks.vim'
+Plug 'junegunn/fzf.vim'
+Plug 'easymotion/vim-easymotion'
+Plug 'danchoi/elinks.vim'
 Plug 'epeli/slimux'
 Plug 'chriskempson/base16-vim'
 Plug 'tpope/vim-fugitive'
 Plug 'junegunn/gv.vim'
 Plug 'vim-airline/vim-airline'
+Plug 'w0ng/vim-hybrid'
 
 call plug#end()
