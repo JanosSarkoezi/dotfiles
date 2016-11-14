@@ -22,6 +22,7 @@ set listchars=tab:»\ ,eol:¶,trail:.
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
+set expandtab
 
 colors hybrid
 
@@ -38,3 +39,10 @@ set clipboard+=unnamedplus
 
 let g:airline_left_sep = ''
 let g:airline_right_sep = ''
+let mapleader=" "
+
+autocmd FileType java setlocal omnifunc=javacomplete#Complete
+
+call deoplete#enable()
+" deoplete tab-complete
+inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
