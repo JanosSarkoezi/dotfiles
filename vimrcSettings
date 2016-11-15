@@ -42,6 +42,11 @@ let mapleader=" "
 
 autocmd FileType java setlocal omnifunc=javacomplete#Complete
 
+nnoremap <silent> <A-Down> :wincmd j<cr>
+nnoremap <silent> <A-Up> :wincmd k<cr>
+nnoremap <silent> <A-Left> :wincmd h<cr>
+nnoremap <silent> <A-Right> :wincmd l<cr>
+
 call deoplete#enable()
 " deoplete tab-complete
 inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
