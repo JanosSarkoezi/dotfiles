@@ -1,0 +1,36 @@
+pushd fzf; git pull; ~/.fzf/install --all; popd
+Already up-to-date.
+Downloading bin/fzf ...
+  - Already exists
+  - Checking fzf executable ... 0.15.8
+
+Generate ~/.fzf.bash ... OK
+Generate ~/.fzf.zsh ... OK
+
+Update /home/saj/.bashrc:
+  - [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+    - Already exists: line #120 
+
+Update /home/saj/.zshrc:
+  - [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+    - Already exists: line #89 
+
+Finished. Restart your shell or reload config file.
+   source ~/.bashrc  # bash
+   source ~/.zshrc   # zsh
+
+Use uninstall script to remove fzf.
+
+For more information, see: https://github.com/junegunn/fzf
+pushd elinks; git pull; popd
+Already up-to-date.
+pushd oh-my-zsh; git pull; popd
+Already up-to-date.
+pushd todo.txt-cli; git pull; popd
+Already up-to-date.
+pushd base16-gnome-terminal; git pull; popd
+Already up-to-date.
+pushd gist/tarruda/5158535; git pull; popd
+Already up-to-date.
+pushd vim/autoload; git pull; popd
+Already up-to-date.
