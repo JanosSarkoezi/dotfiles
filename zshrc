@@ -87,4 +87,3 @@ alias vim='nvim'
 export EDITOR='nvim'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-[ -f ~/.user.zsh ] && source ~/.user.zsh
