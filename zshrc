@@ -85,5 +85,6 @@ alias t="~/.dotfiles/todo.txt-cli/todo.sh"
 alias tmux="TERM=xterm-256color ~/.bin/tmux"
 alias vim='nvim'
 export EDITOR='nvim'
+setopt rm_star_silent
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
