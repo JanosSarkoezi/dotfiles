@@ -121,3 +121,5 @@ autoinscribe += wand.*heal:@v3
 #
 tile_layout_priority  = monster, inventory, spell, gold_turn, command
 tile_layout_priority += ability, minimap
+
+allow_extended_colours = true
