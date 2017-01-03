@@ -11,8 +11,9 @@ Plug 'tpope/vim-fugitive'
 Plug 'junegunn/gv.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'w0ng/vim-hybrid'
-Plug 'artur-shaik/vim-javacomplete2'
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'majutsushi/tagbar'
+Plug 'guns/xterm-color-table.vim'
+" Plug 'artur-shaik/vim-javacomplete2'
+" Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+" Plug 'majutsushi/tagbar'
 
 call plug#end()

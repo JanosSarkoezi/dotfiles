@@ -40,13 +40,18 @@ let g:airline_left_sep = ''
 let g:airline_right_sep = ''
 let mapleader=" "
 
-autocmd FileType java setlocal omnifunc=javacomplete#Complete
-
 nnoremap <silent> <A-Down> :wincmd j<cr>
 nnoremap <silent> <A-Up> :wincmd k<cr>
 nnoremap <silent> <A-Left> :wincmd h<cr>
 nnoremap <silent> <A-Right> :wincmd l<cr>
 
-call deoplete#enable()
-" deoplete tab-complete
-inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
+autocmd CursorMoved,CursorMovedI * diffupdate
+
+if &diff
+    map ] ]c
+    map [ [c
+    highlight DiffAdd    ctermfg=193 ctermbg=65  guifg=#d7ffaf guibg=#5F875F
+    highlight DiffChange ctermfg=193 ctermbg=60  guifg=#d7d7ff guibg=#5F5F87
+    highlight DiffDelete ctermfg=193 ctermbg=167 guifg=#1d1f21 guibg=#cc6666
+    highlight DiffText   ctermfg=193 ctermbg=110 guifg=#1d1f21 guibg=#81a2be
+endif
