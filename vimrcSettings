@@ -18,6 +18,13 @@ set listchars=tab:▸\ ,eol:¬
 " » (U+00BB) und ¶ (U+00B6). Die vorher gesetzten Symbole werden
 " überschrieben.
 set listchars=tab:»\ ,eol:¶,trail:.
+highlight ExtraWhitespace ctermbg=red guibg=red
+" highlight ExtraWhitespace ctermbg=red guibg=red
+" match ExtraWhitespace /\s\+$/
+" autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
+" autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+" autocmd InsertLeave * match ExtraWhitespace /\s\+$/
+" autocmd BufWinLeave * call clearmatches()
 
 set tabstop=4
 set softtabstop=4
