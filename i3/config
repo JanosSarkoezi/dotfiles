@@ -183,7 +183,7 @@ set $mode_launcher Launch: [l]ock [e]xit [s]hutdown [r]eboot
 bindsym $mod+x mode "$mode_launcher"
 
 mode "$mode_launcher" {
-    bindsym l exec i3lock, mode "default"
+    bindsym l exec /home/saj/.dotfiles/i3/lock, mode "default"
     bindsym e exec i3-msg exit, mode "default"
     bindsym s exec systemctl poweroff, mode "default"
     bindsym r exec systemctl reboot, mode "default"
