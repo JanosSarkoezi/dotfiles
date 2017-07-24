@@ -36,6 +36,8 @@ bindsym $mod+Return exec termite
 # kill focused window
 bindsym $mod+Shift+q kill
 
+focus_follows_mouse no
+
 # start dmenu (a program launcher)
 # SAJ bindsym $mod+d exec dmenu_run
 bindsym $mod+d exec i3-dmenu-desktop
