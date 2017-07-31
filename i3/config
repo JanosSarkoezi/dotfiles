@@ -168,7 +168,7 @@ assign [class="Gnome-terminal"] 2
 assign [class="Firefox"] 1
 assign [class="luakit"] 1
 
-bindsym F2 exec --no-startup-id i3-dmenu-desktop --dmenu='rofi -dmenu'
+# bindsym F2 exec --no-startup-id i3-dmenu-desktop --dmenu='rofi -dmenu'
 
 exec compton
 exec gnome-terminal
