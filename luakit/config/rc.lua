@@ -103,6 +103,48 @@ end)
 
 -- Add vimperator-like link hinting & following
 local follow = require "follow"
+local select = require "select"
+select.label_maker = function (s)
+    return s.sort(s.reverse(s.charset("asdfqweryxcv")))
+end
+
+follow.stylesheet = [===[
+#luakit_select_overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2147483647; /* Maximum allowable on WebKit */
+}
+
+#luakit_select_overlay .hint_overlay {
+    display: block;
+    position: absolute;
+    background-color: #ffff99;
+    border: 1px dotted #000;
+    opacity: 0.3;
+}
+
+#luakit_select_overlay .hint_label {
+    display: block;
+    padding: 3px;
+    position: absolute;
+    background-color: #ffff00;
+    border: 1px solid #000;
+    border-radius: 3px;
+    color: #000;
+    font-size: 20px;
+    font-family: monospace, courier, sans-serif;
+    opacity: 1.0;
+}
+
+#luakit_select_overlay .hint_overlay_body {
+    background-color: #ff0000;
+}
+
+#luakit_select_overlay .hint_selected {
+    background-color: #00ff00;
+}
+]===]
 
 -- Add command history
 local cmdhist = require "cmdhist"
