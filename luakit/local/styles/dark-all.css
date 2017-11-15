@@ -34,14 +34,15 @@
   
   #luakit_select_overlay .hint_label {
     display: block;
-    padding: 3px;
+    padding: 1px 3px 0px !important;
     position: absolute;
-    background-color: #ffff00 !important;
-    border: 1px solid #000;
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgb(255, 247, 133)), to(rgb(255, 197, 66))) !important;
+    border: 1px solid rgb(227, 190, 35) !important;
     border-radius: 3px;
     color: #000 !important;
-    font-size: 20px;
+    font-size: 11px;
     font-family: monospace, courier, sans-serif;
+    font-weight: bold;
     opacity: 1.0;
   }
   
