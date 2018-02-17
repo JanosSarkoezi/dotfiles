@@ -173,8 +173,11 @@ for_window [class="feh"] floating enable
 
 # bindsym F2 exec --no-startup-id i3-dmenu-desktop --dmenu='rofi -dmenu'
 
-exec compton
-exec gnome-terminal
+exec --no-startup-id compton
+# exec --no-startup-id compton --vsync opengl --backend glx --paint-on-overlay
+# exec --no-startup-id xcompmgr -c -f -n
+new_window pixel
+# exec gnome-terminal
 # The -dpms option disables DPMS (Energy Star) features.
 # The  s option lets you set the screen saver parameters.
 exec xset -dpms s off
