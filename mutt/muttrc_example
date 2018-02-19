@@ -1,0 +1,40 @@
+source ~/.mutt/aliases
+
+set imap_user=[fistName.lastName]
+set folder=imaps://[server.name.de]
+set spoolfile=+INBOX
+mailboxes +INBOX
+set imap_passive
+set imap_keepalive=300
+set mail_check=5
+set timeout=10
+set my_user=[fistName.lastName]
+set realname='[Real Name]'
+set from=lastName@company.de
+set use_from=yes
+set signature = "path/to/signature"
+set edit_headers=yes
+set ssl_force_tls=yes
+set ssl_starttls=yes
+set record=+Sent
+set postponed=+Draft
+set editor=vim
+set mailcap_path=~/.mutt/mailcap
+auto_view text/html
+alternative_order text/plain text/html
+set print_command = "/usr/bin/xpp"
+set sendmail="/usr/bin/msmtp"
+
+ignore *
+unignore from: subject to cc date x-mailer x-url user-agent
+
+color normal     white        black
+color attachment brightyellow black
+color hdrdefault cyan         black
+color indicator  black        cyan
+color markers    brightred    black
+color quoted     green        black
+color signature  cyan         black
+color status     brightgreen  blue
+color tilde      blue         black
+color tree       red          black
