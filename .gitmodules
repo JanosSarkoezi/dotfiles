@@ -16,3 +16,6 @@
 [submodule "todo.txt-cli"]
 	path = todo.txt-cli
 	url = https://github.com/ginatrapani/todo.txt-cli
+[submodule "fasd"]
+	path = fasd
+	url = https://github.com/clvv/fasd
