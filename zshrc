@@ -88,6 +88,7 @@ export EDITOR='nvim'
 setopt rm_star_silent
 
 eval "$(fasd --init auto)"
+eval "$(lesspipe)"
 
 # colored Manpages
 export LESS_TERMCAP_mb=$(printf '\e[01;31m') # enter blinking mode - red
