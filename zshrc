@@ -87,6 +87,8 @@ alias vim='nvim'
 export EDITOR='nvim'
 setopt rm_star_silent
 
+eval "$(fasd --init auto)"
+
 # colored Manpages
 export LESS_TERMCAP_mb=$(printf '\e[01;31m') # enter blinking mode - red
 export LESS_TERMCAP_md=$(printf '\e[01;31m') # enter double-bright mode - bold, magenta
