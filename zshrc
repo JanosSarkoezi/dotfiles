@@ -100,5 +100,6 @@ export LESS_TERMCAP_se=$(printf '\e[0m') # leave standout mode
 export LESS_TERMCAP_ue=$(printf '\e[0m') # leave underline mode
 
 export GROFF_NO_SGR=1                  # for konsole and gnome-terminal
+eval "$(fasd --init auto)"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
