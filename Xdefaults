@@ -39,7 +39,7 @@
 *color15: #f1efee
 
 URxvt.intensityStyles:	false
-URxvt.background:       [70]#000000
+URxvt.background:       [100]#1C1C1C
 URxvt.depth:		32
 URxvt.font: 		xft:DejaVu Sans Mono:size=12
 URxvt.scrollBar:	false
