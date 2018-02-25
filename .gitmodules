@@ -19,3 +19,6 @@
 [submodule "fasd"]
 	path = fasd
 	url = https://github.com/clvv/fasd
+[submodule "urxvt-perls"]
+	path = urxvt-perls
+	url = https://github.com/muennich/urxvt-perls.git
