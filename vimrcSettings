@@ -5,7 +5,7 @@ set ignorecase
 " Wenn doch Großbuchstaben bei der suche vorkommen, dann suche danachxxx
 set smartcase
 set t_Co=256
-set background=dark
+" set background=dark
 
 " Benutze die selben Symbole wie TextMate für Tabstops und EOLs
 " Damit diese Sonderzeichen › (U+203A), ▸ (U+25B8) und ¬ (U+00AC)
@@ -31,7 +31,7 @@ set softtabstop=4
 set shiftwidth=4
 set expandtab
 
-colors hybrid
+" colors hybrid
 
 " Benutze immer das Clipboard. Hiermit ist der direkte Zugriff
 " auf das Clipboard über (y)ank und (p)aste möglich.
@@ -51,6 +51,7 @@ onoremap <silent> d d:call ClipboardYank()<cr>
 
 " Die Zeile visuell markieren, in der der Cursor ist
 set cursorline
+highlight CursorLine cterm=NONE ctermfg=193 ctermbg=65  guifg=#d7ffaf guibg=#5F875F
 " Das automatische anzeigen von Klammern ausschalten, wenn der Cursor drüber
 " ist
 let loaded_matchparen = 1
