@@ -13,5 +13,5 @@ elif echo §mpvFiles | grep -w $ext > /dev/null; then
     nohup wget "$1" > /dev/null &
 else
     # nohup $BROWSER "$1" > /dev/null &
-    nohup luakit "$1" > /dev/null &
+    nohup chromium-browser "$1" > /dev/null &
 fi
