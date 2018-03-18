@@ -52,6 +52,8 @@ onoremap <silent> d d:call ClipboardYank()<cr>
 " Die Zeile visuell markieren, in der der Cursor ist
 set cursorline
 highlight CursorLine cterm=NONE ctermfg=193 ctermbg=65  guifg=#d7ffaf guibg=#5F875F
+highlight Visual ctermfg=232 ctermbg=239
+highlight Search ctermfg=black ctermbg=178
 " Das automatische anzeigen von Klammern ausschalten, wenn der Cursor drüber
 " ist
 let loaded_matchparen = 1
