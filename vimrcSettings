@@ -67,8 +67,6 @@ nnoremap <silent> <A-Up> :wincmd k<cr>
 nnoremap <silent> <A-Left> :wincmd h<cr>
 nnoremap <silent> <A-Right> :wincmd l<cr>
 
-autocmd CursorMoved,CursorMovedI * diffupdate
-
 if &diff
     map ] ]c
     map [ [c
