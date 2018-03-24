@@ -17,6 +17,12 @@
     color: lightgrey !important;
   }
 
+  .mwe-math-fallback-image-inline {
+    -webkit-filter: invert(100%) !important;
+    filter: invert(100%) !important;
+    background-color: transparent !important;
+  }
+
   #luakit_select_overlay {
     position: absolute;
     left: 0;
