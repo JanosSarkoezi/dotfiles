@@ -82,7 +82,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias t="~/.dotfiles/todo.txt-cli/todo.sh"
-alias tmux="TERM=xterm-256color ~/.bin/tmux"
+alias tmux="TERM=xterm-256color tmux"
 alias vim='nvim'
 export EDITOR='nvim'
 setopt rm_star_silent
