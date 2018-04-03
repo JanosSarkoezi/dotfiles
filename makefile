@@ -3,7 +3,7 @@ SHELL=zsh
 update: fzf elinks oh-my-zsh todo.txt-cli base16-gnome-terminal gist/tarruda/5158535 vim/autoload
 
 install:
-	mkdir -p ~/.bin && \
+	mkdir -p ~/.local/bin && \
 	mkdir -p ~/.gitTemplate/hooks && \
 	git submodule update --init --recursive && \
 	ln -nsf ~/.dotfiles/zshrc ~/.zshrc && \
@@ -21,9 +21,9 @@ install:
 	ln -nsf ~/.dotfiles/gitTemplate/hooks/post-commit ~/.gitTemplate/hooks/post-commit && \
 	ln -nsf ~/.dotfiles/gitTemplate/hooks/post-checkout ~/.gitTemplate/hooks/post-checkout && \
 	ln -nsf ~/.dotfiles/gitTemplate/hooks/post-rewrite ~/.gitTemplate/hooks/post-rewrite && \
-	ln -nsf ~/.dotfiles/gist/tarruda/5158535/vim-tmux-move.zsh ~/.bin/vim-tmux-move.zsh && \
-	ln -nsf ~/.dotfiles/gist/tarruda/5158535/vim-tmux-xpaste.zsh ~/.bin/vim-tmux-xpaste.zsh && \
-	ln -nsf ~/.dotfiles/gist/tarruda/5158535/vim-tmux-open.zsh ~/.bin/vim-tmux-open.zsh && \
+	ln -nsf ~/.dotfiles/gist/tarruda/5158535/vim-tmux-move.zsh ~/.local/bin/vim-tmux-move.zsh && \
+	ln -nsf ~/.dotfiles/gist/tarruda/5158535/vim-tmux-xpaste.zsh ~/.local/bin/vim-tmux-xpaste.zsh && \
+	ln -nsf ~/.dotfiles/gist/tarruda/5158535/vim-tmux-open.zsh ~/.local/bin/vim-tmux-open.zsh && \
 	~/.fzf/install --all
 
 fzf:
