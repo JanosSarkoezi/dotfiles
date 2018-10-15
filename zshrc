@@ -83,8 +83,8 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias t="~/.dotfiles/todo.txt-cli/todo.sh"
 alias tmux="TERM=xterm-256color tmux"
-alias vim='nvim'
-export EDITOR='nvim'
+alias vim='vim'
+export EDITOR='vim'
 setopt rm_star_silent
 
 eval "$(fasd --init auto)"
