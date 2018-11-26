@@ -101,4 +101,15 @@ export LESS_TERMCAP_ue=$(printf '\e[0m') # leave underline mode
 
 export GROFF_NO_SGR=1                  # for konsole and gnome-terminal
 
+fscp() {
+  local files
+
+  file="$(
+    ssh "$1" tree -if | fzf 
+  )"
+
+  scp "$1":"$file" .
+  echo "$1":"$file" .
+}
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
