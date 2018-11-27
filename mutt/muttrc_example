@@ -38,3 +38,5 @@ color signature  cyan         black
 color status     brightgreen  blue
 color tilde      blue         black
 color tree       red          black
+
+macro index,pager \Cu "<enter-command>set pipe_decode = yes<enter><pipe-message>urlview<enter><enter-command>set pipe_decode = no<enter>" "view URLs"
