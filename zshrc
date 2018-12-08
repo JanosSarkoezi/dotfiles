@@ -113,7 +113,6 @@ fscp() {
 }
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-source /home/saj/anaconda3/etc/profile.d/conda.sh
 
 PATH="/home/saj/perl5/bin${PATH:+:${PATH}}"; export PATH;
 PERL5LIB="/home/saj/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
