@@ -62,11 +62,6 @@ let g:airline_left_sep = ''
 let g:airline_right_sep = ''
 let mapleader=" "
 
-nnoremap <silent> <A-Down> :wincmd j<cr>
-nnoremap <silent> <A-Up> :wincmd k<cr>
-nnoremap <silent> <A-Left> :wincmd h<cr>
-nnoremap <silent> <A-Right> :wincmd l<cr>
-
 if &diff
     map ] ]c
     map [ [c

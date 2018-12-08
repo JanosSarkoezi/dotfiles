@@ -2,15 +2,16 @@ call plug#begin('~/.vim/bundle')
 
 set rtp+=~/.fzf
 Plug 'junegunn/fzf.vim'
+" Plug 'christoomey/vim-tmux-navigator'
 " Plug 'easymotion/vim-easymotion'
 " Plug 'danchoi/elinks.vim'
 " Plug 'epeli/slimux'
-Plug 'chriskempson/base16-vim'
+" Plug 'chriskempson/base16-vim'
 " Plug 'tpope/vim-fugitive'
 " Plug 'junegunn/gv.vim'
-Plug 'vim-airline/vim-airline'
-Plug 'w0ng/vim-hybrid'
-Plug 'guns/xterm-color-table.vim'
+" Plug 'vim-airline/vim-airline'
+" Plug 'w0ng/vim-hybrid'
+" Plug 'guns/xterm-color-table.vim'
 " Plug 'JanosSarkoezi/vim-lilypond'
 
 call plug#end()
