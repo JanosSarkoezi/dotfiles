@@ -62,11 +62,7 @@ let g:airline_left_sep = ''
 let g:airline_right_sep = ''
 let mapleader=" "
 
-if &diff
-    map ] ]c
-    map [ [c
-    highlight DiffAdd    ctermfg=193 ctermbg=65  guifg=#d7ffaf guibg=#5F875F
-    highlight DiffChange ctermfg=193 ctermbg=60  guifg=#d7d7ff guibg=#5F5F87
-    highlight DiffDelete ctermfg=193 ctermbg=167 guifg=#1d1f21 guibg=#cc6666
-    highlight DiffText   ctermfg=193 ctermbg=110 guifg=#1d1f21 guibg=#81a2be
-endif
+hi DiffAdd    ctermbg=235  ctermfg=108  guibg=#262626 guifg=#87af87 cterm=reverse  gui=reverse
+hi DiffChange ctermbg=235  ctermfg=103  guibg=#262626 guifg=#8787af cterm=reverse  gui=reverse
+hi DiffDelete ctermbg=235  ctermfg=131  guibg=#262626 guifg=#af5f5f cterm=reverse  gui=reverse
+hi DiffText   ctermbg=235  ctermfg=208  guibg=#262626 guifg=#ff8700 cterm=reverse  gui=reverse
