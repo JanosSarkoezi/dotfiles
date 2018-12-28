@@ -5,7 +5,7 @@ set ignorecase
 " Wenn doch Großbuchstaben bei der suche vorkommen, dann suche danachxxx
 set smartcase
 set t_Co=256
-" set background=dark
+set background=dark
 
 " Benutze die selben Symbole wie TextMate für Tabstops und EOLs
 " Damit diese Sonderzeichen › (U+203A), ▸ (U+25B8) und ¬ (U+00AC)
@@ -31,7 +31,7 @@ set softtabstop=4
 set shiftwidth=4
 set expandtab
 
-" colors hybrid
+colors gruvbox
 
 " Benutze immer das Clipboard. Hiermit ist der direkte Zugriff
 " auf das Clipboard über (y)ank und (p)aste möglich.
@@ -62,10 +62,16 @@ let g:airline_left_sep = ''
 let g:airline_right_sep = ''
 let mapleader=" "
 
-hi DiffAdd    ctermbg=235  ctermfg=108  guibg=#262626 guifg=#87af87 cterm=reverse  gui=reverse
-hi DiffChange ctermbg=235  ctermfg=103  guibg=#262626 guifg=#8787af cterm=reverse  gui=reverse
-hi DiffDelete ctermbg=235  ctermfg=131  guibg=#262626 guifg=#af5f5f cterm=reverse  gui=reverse
-hi DiffText   ctermbg=235  ctermfg=208  guibg=#262626 guifg=#ff8700 cterm=reverse  gui=reverse
+if &diff
+  map ] ]c
+  map [ [c
+  hi DiffAdd    ctermbg=235  ctermfg=108  guibg=#262626 guifg=#87af87 cterm=reverse  gui=reverse
+  hi DiffChange ctermbg=235  ctermfg=103  guibg=#262626 guifg=#8787af cterm=reverse  gui=reverse
+  hi DiffDelete ctermbg=235  ctermfg=131  guibg=#262626 guifg=#af5f5f cterm=reverse  gui=reverse
+  hi DiffText   ctermbg=235  ctermfg=208  guibg=#262626 guifg=#ff8700 cterm=reverse  gui=reverse
+endif
+
+set diffopt+=vertical
 
 augroup dracula_customization
   au!

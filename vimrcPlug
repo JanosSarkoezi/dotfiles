@@ -2,7 +2,9 @@ call plug#begin('~/.vim/bundle')
 
 set rtp+=~/.fzf
 Plug 'junegunn/fzf.vim'
-Plug 'dracula/vim', {'as': 'dracula'}
+Plug 'Valloric/YouCompleteMe'
+Plug 'morhetz/gruvbox'
+Plug 'tpope/vim-fugitive'
 " Plug 'christoomey/vim-tmux-navigator'
 " Plug 'easymotion/vim-easymotion'
 " Plug 'danchoi/elinks.vim'
