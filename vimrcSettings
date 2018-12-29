@@ -31,8 +31,6 @@ set softtabstop=4
 set shiftwidth=4
 set expandtab
 
-colors gruvbox
-
 " Benutze immer das Clipboard. Hiermit ist der direkte Zugriff
 " auf das Clipboard über (y)ank und (p)aste möglich.
 " set clipboard+=unnamedplus
@@ -65,15 +63,14 @@ let mapleader=" "
 if &diff
   map ] ]c
   map [ [c
-  hi DiffAdd    ctermbg=235  ctermfg=108  guibg=#262626 guifg=#87af87 cterm=reverse  gui=reverse
-  hi DiffChange ctermbg=235  ctermfg=103  guibg=#262626 guifg=#8787af cterm=reverse  gui=reverse
-  hi DiffDelete ctermbg=235  ctermfg=131  guibg=#262626 guifg=#af5f5f cterm=reverse  gui=reverse
-  hi DiffText   ctermbg=235  ctermfg=208  guibg=#262626 guifg=#ff8700 cterm=reverse  gui=reverse
 endif
 
+" Für Gdiff von fugitive. Damit werden die Panes vertikal angeordnet.
 set diffopt+=vertical
 
-augroup dracula_customization
-  au!
-  autocmd colorscheme dracula hi Normal ctermbg=black
-augroup END
+" Gute Auswahl von Farben
+colors gruvbox
+" Hintergrundfarbe ausschalten, da in der .tmux.conf gesezter Wert gelden
+" soll. Wenn man zwischen den Panes wechelst so wird das inaktive Pane
+" asugegraut. Seie hierzu in der .tmux.conf
+hi Normal ctermbg=none
