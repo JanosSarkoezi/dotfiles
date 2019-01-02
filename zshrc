@@ -84,6 +84,7 @@ source $ZSH/oh-my-zsh.sh
 alias t="~/.dotfiles/todo.txt-cli/todo.sh"
 alias tmux="TERM=xterm-256color tmux"
 alias vim='vim'
+alias debtree2="debtree --no-version --max-depth=2"
 export EDITOR='vim'
 setopt rm_star_silent
 
