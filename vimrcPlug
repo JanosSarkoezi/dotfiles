@@ -2,7 +2,7 @@ call plug#begin('~/.vim/bundle')
 
 set rtp+=~/.fzf
 Plug 'junegunn/fzf.vim'
-Plug 'Valloric/YouCompleteMe'
+Plug 'Valloric/YouCompleteMe', { 'do': 'python3 install.py --java-completer' }
 Plug 'morhetz/gruvbox'
 " Wenn fugitive mit git mergetool funktioniereun soll dann müssel folgende
 " Zeilen ausgeführt werden:
