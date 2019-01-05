@@ -27,24 +27,24 @@ install:
 	~/.fzf/install --all
 
 fzf:
-	pushd fzf; git pull; ~/.fzf/install --all; popd
+	pushd fzf && git checkout master && git pull  && ~/.fzf/install --all && popd
 
 elinks:
-	pushd elinks; git pull; popd
+	pushd elinks && git checkout master && git pull && popd
 
 oh-my-zsh:
-	pushd oh-my-zsh; git pull; popd
+	pushd oh-my-zsh && git pull && popd
 
 todo.txt-cli:
-	pushd todo.txt-cli; git pull; popd
+	pushd todo.txt-cli && git checkout master  && git pull && popd
 
 base16-gnome-terminal:
-	pushd base16-gnome-terminal; git pull; popd
+	pushd base16-gnome-terminal && git checkout master && git pull && popd
 
 gist/tarruda/5158535:
-	pushd gist/tarruda/5158535; git pull; popd
+	pushd gist/tarruda/5158535 && git checkout master && git pull && popd
 
 vim/autoload:
-	pushd vim/autoload; git pull; popd
+	pushd vim/autoload && git checkout master && git pull && popd
 
 .PHONY: fzf elinks oh-my-zsh todo.txt-cli base16-gnome-terminal gist/tarruda/5158535 vim/autoload install update
