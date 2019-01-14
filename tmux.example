@@ -1,0 +1,15 @@
+#!/bin/zsh
+SESSION=$USER
+
+tmux -2 new-session -d -s $SESSION
+
+# Setup a window for tailing log files
+tmux new-window -t $SESSION:1 -n 'Monitoring'
+tmux split-window -v
+tmux select-pane -t 0
+tmux send-keys "less -f /var/log/auth.log" C-m
+tmux select-pane -t 1
+tmux send-keys "less -f /var/log/syslog" C-m
+tmux split-window -v
+tmux select-layout even-vertical
+tmux attach-session
