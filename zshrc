@@ -55,6 +55,7 @@ plugins=(git docker-compose)
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
+fpath=($HOME/.dotfiles/completions $fpath)
 source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment

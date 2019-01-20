@@ -1,0 +1,51 @@
+#compdef run
+
+_run()
+{
+    local curcontext="$curcontext" state line
+    typeset -A opt_args
+
+    _arguments -C \
+        ':command:->command' \
+        '*::options:->options'
+
+    case $state in
+        (command)
+            local -a subcommands
+            subcommands=(
+                'tmux:starts tmux with own configuration.'
+                'venv:starts python virtualenv.'
+            )
+            _describe -t commands 'run' subcommands
+        ;;
+        (options)
+            case $line[1] in
+                (tmux)
+                ;;
+                (venv)
+                    __run-venv
+                ;;
+            esac
+        ;;
+    esac
+}
+
+__run-venv()
+{
+	local curcontext="$curcontext" state line
+	typeset -A opt_args
+
+	_arguments -C \
+		':command:->command' \
+		'*::options:->options'
+
+	case $state in
+		(command)
+			local -a subcommands
+			subcommands=(
+				'main:Start a new hotfix branch.'
+			)
+			_describe -t commands 'run venv' subcommands
+		;;
+	esac
+}

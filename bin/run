@@ -1,0 +1,21 @@
+#!/bin/zsh
+
+_handle_venv() {
+    case $1 in
+        (main)
+        source /home/saj/dev/python/env/main/bin/activate
+        ;;
+   esac
+}
+
+case $1 in
+    (tmux)
+        ~/.dotfiles/tmux.example
+    ;;
+    (venv)
+        shift
+        _handle_venv $1
+    ;;
+esac
+
+return 0
