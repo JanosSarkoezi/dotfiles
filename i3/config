@@ -175,7 +175,8 @@ for_window [class="feh"] floating enable
 
 # bindsym F2 exec --no-startup-id i3-dmenu-desktop --dmenu='rofi -dmenu'
 
-exec --no-startup-id compton
+# exec --no-startup-id compton -cCfF -b -i 0.75 --vsync opengl
+# exec --no-startup-id compton
 exec --no-startup-id feh --bg-scale ~/.dotfiles/wallpaper/01.jpg
 # exec --no-startup-id compton --vsync opengl --backend glx --paint-on-overlay
 # exec --no-startup-id xcompmgr -c -f -n

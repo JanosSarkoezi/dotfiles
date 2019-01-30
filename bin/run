@@ -1,5 +1,16 @@
 #!/bin/zsh
 
+_handle_tmux() {
+    case $1 in
+        (work)
+            ~/.dotfiles/tmux.work
+        ;;
+        (monitor)
+            ~/.dotfiles/tmux.monitor
+        ;;
+   esac
+}
+
 _handle_venv() {
     case $1 in
         (main)
@@ -10,7 +21,8 @@ _handle_venv() {
 
 case $1 in
     (tmux)
-        ~/.dotfiles/tmux.example
+        shift
+        _handle_tmux $1
     ;;
     (venv)
         shift

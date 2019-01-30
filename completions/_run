@@ -21,6 +21,7 @@ _run()
         (options)
             case $line[1] in
                 (tmux)
+                    __run-tmux
                 ;;
                 (venv)
                     __run-venv
@@ -43,7 +44,29 @@ __run-venv()
 		(command)
 			local -a subcommands
 			subcommands=(
-				'main:Start a new hotfix branch.'
+				'main:Start the main envitonment.'
+				'ninja:Start the ninja environment.'
+			)
+			_describe -t commands 'run venv' subcommands
+		;;
+	esac
+}
+
+__run-tmux()
+{
+	local curcontext="$curcontext" state line
+	typeset -A opt_args
+
+	_arguments -C \
+		':command:->command' \
+		'*::options:->options'
+
+	case $state in
+		(command)
+			local -a subcommands
+			subcommands=(
+				'monitor:Start tmux with monitoring windows and panes.'
+				'work:Start tmux with work windows and panes.'
 			)
 			_describe -t commands 'run venv' subcommands
 		;;
