@@ -1,0 +1,9 @@
+set cookie-accept=origin
+set download-path=/tmp/vimb
+set editor-command=st -t scratchpad -g 80x20+40+60 -e vim %s
+set history-max-items=30000
+set home-page=about:blank
+set plugins=off
+set scripts=off
+set webinspector=on
+set default-zoom=150
