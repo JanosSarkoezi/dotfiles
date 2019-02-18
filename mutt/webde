@@ -1,0 +1,11 @@
+unmailboxes *
+set from="bla@web.de"
+set hostname="web.de"
+set imap_user="bla"
+set imap_pass="`pass email/bla@web.de`"
+set smtp_url = "smtp://$imap_user@smtp.web.de:587/"
+set smtp_pass = "`pass email/bla@web.de`"
+set folder="imaps://imap.web.de/"
+set postponed="=Entwurf"
+set record="=Gesendet"
+set spoolfile="=INBOX"

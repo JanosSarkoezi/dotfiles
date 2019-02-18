@@ -1,0 +1,11 @@
+unmailboxes *
+set from="bla@intervista-ag.de"
+set hostname="mx02.intervista.at"
+set imap_user="bla"
+set imap_pass="`pass email/bla@intervista-ag.de`"
+set smtp_url = "smtp://$imap_user@$hostname:587/"
+set smtp_pass = "$imap_pass"
+set folder="imaps://$hostname:993/"
+set postponed="=Entwürfe"
+set record="=Gesendet"
+set spoolfile="=INBOX"

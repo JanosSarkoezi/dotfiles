@@ -1,0 +1,11 @@
+unmailboxes *
+set from="bla@googlemail.com"
+set hostname="googlemail.com"
+set imap_user="bla"
+set imap_pass="`pass email/bla@googlemail.com`"
+set smtp_url = "smtp://$imap_user@smtp.gmail.com:587/"
+set smtp_pass = "`pass email/bla@googlemail.com`"
+set folder="imaps://imap.googlemail.com/"
+set postponed="=[Google Mail]/Entwürfe"
+set record="=[Google Mail]/Gesendet"
+set spoolfile="=INBOX"
