@@ -31,6 +31,9 @@ set softtabstop=4
 set shiftwidth=4
 set expandtab
 
+" Aktiviert die Erkennund von vim Konfiguration in einer Datei
+set modeline
+
 " Benutze immer das Clipboard. Hiermit ist der direkte Zugriff
 " auf das Clipboard über (y)ank und (p)aste möglich.
 " set clipboard+=unnamedplus
