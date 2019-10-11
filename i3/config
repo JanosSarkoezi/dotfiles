@@ -166,7 +166,6 @@ assign [class="crawl"] 3
 assign [class="Eclipse"] 3
 assign [class="NetBeans IDE 8.1"] 3
 assign [class="NetBeans IDE 8.2"] 3
-assign [class="jetbrains-idea-ce"] 3
 assign [class="Gnome-terminal"] 2
 assign [class="Firefox"] 1
 assign [class="Luakit"] 1
