@@ -86,15 +86,19 @@ alias t="~/.dotfiles/todo.txt-cli/todo.sh"
 alias tmux="TERM=xterm-256color tmux"
 alias vim='vim'
 alias debtree2="debtree --no-version --max-depth=2"
+alias mc='tmux split -h lf; lf'
+
 export EDITOR='vim'
+export TERMINAL='st'
+export OPENER='mimeopen'
 setopt rm_star_silent
 
 eval "$(fasd --init auto)"
-unalias z
-z() {
-  local dir
-  dir="$(fasd -Rdl "$1" | fzf -1 -0 --no-sort +m)" && cd "${dir}" || return 1
-}
+# unalias z
+# z() {
+#   local dir
+#   dir="$(fasd -Rdl "$1" | fzf -1 -0 --no-sort +m)" && cd "${dir}" || return 1
+# }
 
 eval "$(lesspipe)"
 
