@@ -82,7 +82,7 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias t="~/.dotfiles/todo.txt-cli/todo.sh"
+alias t="~/.dotfiles/todo"
 alias tmux="TERM=xterm-256color tmux"
 alias vim='vim'
 alias debtree2="debtree --no-version --max-depth=2"
