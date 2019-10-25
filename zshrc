@@ -87,6 +87,7 @@ alias tmux="TERM=xterm-256color tmux"
 alias vim='vim'
 alias debtree2="debtree --no-version --max-depth=2"
 alias mc='tmux split -h lf; lf'
+alias gdvim='git difftool --no-prompt --tool=vimdiff --diff-algorithm=default'
 
 export EDITOR='vim'
 export TERMINAL='st'
