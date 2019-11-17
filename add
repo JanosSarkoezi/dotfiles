@@ -1,0 +1,2 @@
+#!/bin/bash
+mpc listall | dmenu -l 5 -b -i -nb '#040404' -nf '#525252' -sf '#ffa0ff' -sb '#000000' -fn '-*-terminus-medium-r-*-*-16-*-*-*-*-*-*-*' -p "Find:" | mpc add
