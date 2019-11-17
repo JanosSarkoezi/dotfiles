@@ -1,0 +1,3 @@
+#!/bin/bash
+# mpc del `mpc playlist | awk '{print NR " " $s}' | fzf --reverse | cut -d' ' -f1`
+mpc playlist | awk '{print NR " " $s}' | fzf --reverse | cut -d' ' -f1 | mpc del
