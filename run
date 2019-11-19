@@ -1,0 +1,57 @@
+#!/bin/zsh
+
+_handle_tmux() {
+    case $1 in
+        (work)
+            ~/.dotfiles/tmux.work
+        ;;
+        (monitor)
+            ~/.dotfiles/tmux.monitor
+        ;;
+   esac
+}
+
+_handle_venv() {
+    case $1 in
+        (main)
+        source /home/saj/dev/python/env/main/bin/activate
+        ;;
+   esac
+}
+
+_handle_mount() {
+    case $1 in
+        (user)
+            if grep -qs '/mnt/iv/user' /proc/mounts; then
+            else
+                sudo mount -t cifs //srv-iv2-n/user /mnt/iv/user -o username=saj,gid=1001,uid=1001,iocharset=utf8,sec=ntlmv2,vers=1.0
+            fi
+        ;;
+        (home)
+            if grep -qs '/mnt/iv/home' /proc/mounts; then
+            else
+                sudo mount -t cifs //srv-iv2-n/Home/saj /mnt/iv/home -o username=saj,gid=1001,uid=1001,iocharset=utf8,sec=ntlmv2,vers=1.0
+            fi
+        ;;
+   esac
+}
+
+case $1 in
+    (tmux)
+        shift
+        _handle_tmux $1
+    ;;
+    (venv)
+        shift
+        _handle_venv $1
+    ;;
+    (mount)
+        shift
+        _handle_mount $1
+    ;;
+    (umount)
+        sudo umount -a -t cifs -l
+    ;;
+esac
+
+return 0
