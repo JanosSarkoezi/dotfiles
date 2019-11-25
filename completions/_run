@@ -16,6 +16,7 @@ _run()
                 'tmux:starts tmux with own configuration.'
                 'venv:starts python virtualenv.'
                 'mount:mounts several remote directories.'
+                'umount:unmounts all remote directories.'
             )
             _describe -t commands 'run' subcommands
         ;;
