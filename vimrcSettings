@@ -34,6 +34,8 @@ set expandtab
 " Aktiviert die Erkennund von vim Konfiguration in einer Datei
 set modeline
 
+set shada=
+
 vnoremap <C-c> "*y :let @+=@*<CR>
 map <C-p> "+p
 

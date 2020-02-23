@@ -2,13 +2,14 @@ call plug#begin('~/.vim/bundle')
 
 set rtp+=~/.fzf
 Plug 'junegunn/fzf.vim'
-Plug 'Valloric/YouCompleteMe', { 'do': 'python3 install.py --java-completer' }
 Plug 'morhetz/gruvbox'
 " Wenn fugitive mit git mergetool funktioniereun soll dann müssel folgende
 " Zeilen ausgeführt werden:
 "     git config --global mergetool.fugitive.cmd 'vim -f -c "Gdiff" "$MERGED"'
 "     git config --global merge.tool fugitive
 Plug 'tpope/vim-fugitive'
+" Use release branch (Recommend)
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Plug 'JanosSarkoezi/vim-lilypond'
 
 call plug#end()

@@ -84,12 +84,12 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias t="~/.dotfiles/todo"
 alias tmux="TERM=xterm-256color tmux"
-alias vim='vim'
+alias vim='nvim'
 alias debtree2="debtree --no-version --max-depth=2"
 alias mc='tmux split -h lf; lf'
 alias gdvim='git difftool --no-prompt --tool=vimdiff --diff-algorithm=default'
 
-export EDITOR='vim'
+export EDITOR='nvim'
 export TERMINAL='st'
 export OPENER='mimeopen'
 setopt rm_star_silent
