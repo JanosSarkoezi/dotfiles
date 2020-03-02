@@ -2,7 +2,9 @@ call plug#begin('~/.vim/bundle')
 
 set rtp+=~/.fzf
 Plug 'junegunn/fzf.vim'
+Plug 'tomasiser/vim-code-dark'
 Plug 'morhetz/gruvbox'
+Plug 'sakhnik/nvim-gdb', { 'branch': 'legacy' }
 " Wenn fugitive mit git mergetool funktioniereun soll dann müssel folgende
 " Zeilen ausgeführt werden:
 "     git config --global mergetool.fugitive.cmd 'vim -f -c "Gdiff" "$MERGED"'
@@ -11,5 +13,6 @@ Plug 'tpope/vim-fugitive'
 " Use release branch (Recommend)
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Plug 'JanosSarkoezi/vim-lilypond'
+Plug 'vhdirk/vim-cmake'
 
 call plug#end()
