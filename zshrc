@@ -90,7 +90,7 @@ alias mc='tmux split -h lf; lf'
 alias gdvim='git difftool --no-prompt --tool=vimdiff --diff-algorithm=default'
 
 export EDITOR='nvim'
-export TERMINAL='st'
+export TERMINAL='st -e'
 export OPENER='mimeopen'
 setopt rm_star_silent
 

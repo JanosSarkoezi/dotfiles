@@ -1,0 +1,8 @@
+set statusline=
+set statusline+=\ %f
+set statusline+=%m
+set statusline+=%=
+set statusline+=\ %y
+set statusline+=\ %{&fileencoding?&fileencoding:&encoding}
+set statusline+=\ %3p%%
+set statusline+=\ %3l:%-3c
