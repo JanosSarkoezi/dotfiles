@@ -16,6 +16,7 @@ _run()
                 'tmux:starts tmux with own configuration.'
                 'venv:starts python virtualenv.'
                 'mount:mounts several remote directories.'
+                'jenkins:call jenkins builserver'
                 'umount:unmounts all remote directories.'
             )
             _describe -t commands 'run' subcommands
@@ -30,6 +31,9 @@ _run()
                 ;;
                 (mount)
                     __run-mount
+                ;;
+                (jenkins)
+                    __run-jenkins
                 ;;
             esac
         ;;
@@ -95,6 +99,28 @@ __run-mount()
 				'home:Mounts remote home directory.'
 			)
 			_describe -t commands 'run mount' subcommands
+		;;
+	esac
+}
+
+
+__run-jenkins()
+{
+	local curcontext="$curcontext" state line
+	typeset -A opt_args
+
+	_arguments -C \
+		':command:->command' \
+		'*::options:->options'
+
+	case $state in
+		(command)
+			local -a subcommands
+			subcommands=(
+				'build:call jenkins build server for build'
+				'console:call jenkins build server for console output'
+			)
+			_describe -t commands 'run jenkins' subcommands
 		;;
 	esac
 }
