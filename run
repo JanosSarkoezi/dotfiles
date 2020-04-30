@@ -11,6 +11,10 @@ _handle_tmux() {
    esac
 }
 
+_handle_radio() {
+    mplayer $(cat ~/.dotfiles/radio.m3u | fzf)
+}
+
 _handle_venv() {
     case $1 in
         (main)
@@ -40,6 +44,10 @@ case $1 in
     (tmux)
         shift
         _handle_tmux $1
+    ;;
+    (radio)
+        echo "------"
+        _handle_radio
     ;;
     (venv)
         shift
