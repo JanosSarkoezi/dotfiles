@@ -14,7 +14,8 @@ _run()
             local -a subcommands
             subcommands=(
                 'tmux:starts tmux with own configuration.'
-                'venv:starts python virtualenv.'
+                'radio:starts selectable internetradio.'
+                'rdp:starts remote desktop.'
                 'mount:mounts several remote directories.'
                 'jenkins:call jenkins builserver'
                 'umount:unmounts all remote directories.'
@@ -26,8 +27,8 @@ _run()
                 (tmux)
                     __run-tmux
                 ;;
-                (venv)
-                    __run-venv
+                (rdp)
+                    __run-rdp
                 ;;
                 (mount)
                     __run-mount
@@ -40,7 +41,7 @@ _run()
     esac
 }
 
-__run-venv()
+__run-rdp()
 {
 	local curcontext="$curcontext" state line
 	typeset -A opt_args
@@ -53,10 +54,10 @@ __run-venv()
 		(command)
 			local -a subcommands
 			subcommands=(
-				'main:Start the main envitonment.'
-				'ninja:Start the ninja environment.'
+				'db:Start a remote desktop to DB.'
+				'visio:Start a remote desktop to Visio.'
 			)
-			_describe -t commands 'run venv' subcommands
+			_describe -t commands 'run rdp' subcommands
 		;;
 	esac
 }

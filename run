@@ -15,14 +15,6 @@ _handle_radio() {
     mplayer $(cat ~/.dotfiles/radio.m3u | fzf)
 }
 
-_handle_venv() {
-    case $1 in
-        (main)
-        source /home/saj/dev/python/env/main/bin/activate
-        ;;
-   esac
-}
-
 _handle_mount() {
     case $1 in
         (user)
@@ -57,18 +49,24 @@ _handle_jenkins() {
    esac
 }
 
+_handle_rdp() {
+    case $1 in
+        (db)
+            xfreerdp +clipboard /u:Administrator /v:db.iv.lan /size:1850x906 /drive:shared,/home/saj/share
+        ;;
+        (visio)
+            xfreerdp +clipboard /u:intervista\\saj /v:iv-tsplus-01 /size:1850x906 /drive:shared,/home/saj/share
+        ;;
+   esac
+}
+
 case $1 in
     (tmux)
         shift
         _handle_tmux $1
     ;;
     (radio)
-        echo "------"
         _handle_radio
-    ;;
-    (venv)
-        shift
-        _handle_venv $1
     ;;
     (mount)
         shift
@@ -80,6 +78,10 @@ case $1 in
     (jenkins)
         shift
         _handle_jenkins $1
+    ;;
+    (rdp)
+        shift
+        _handle_rdp $1
     ;;
 esac
 
