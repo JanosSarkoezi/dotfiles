@@ -40,6 +40,23 @@ _handle_mount() {
    esac
 }
 
+_handle_jenkins() {
+    case $1 in
+        (build)
+            local target
+            target="$(java -jar ~/.local/bin/jenkins-cli.jar -s http://iv-build-01:8080/ list-jobs 2>/dev/null | fzf)"
+            echo $target
+            [ -z $target ] || java -jar ~/.local/bin/jenkins-cli.jar -s http://iv-build-01:8080/ build $target -f
+        ;;
+        (console)
+            local target
+            target="$(java -jar ~/.local/bin/jenkins-cli.jar -s http://iv-build-01:8080/ list-jobs 2>/dev/null | fzf)"
+            echo $target
+            [ -z $target ] || java -jar ~/.local/bin/jenkins-cli.jar -s http://iv-build-01:8080/ console $target
+        ;;
+   esac
+}
+
 case $1 in
     (tmux)
         shift
@@ -59,6 +76,10 @@ case $1 in
     ;;
     (umount)
         sudo umount -a -t cifs -l
+    ;;
+    (jenkins)
+        shift
+        _handle_jenkins $1
     ;;
 esac
 
