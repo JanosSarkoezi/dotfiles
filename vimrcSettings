@@ -67,3 +67,6 @@ colors codedark
 " soll. Wenn man zwischen den Panes wechelst so wird das inaktive Pane
 " asugegraut. Seie hierzu in der .tmux.conf
 " hi Normal ctermbg=none
+
+let g:languagetool_jar='$HOME/LanguageTool-5.0-SNAPSHOT/languagetool-commandline.jar'
+let g:languagetool_lang='de-DE'

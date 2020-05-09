@@ -14,5 +14,6 @@ Plug 'tpope/vim-fugitive'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Plug 'JanosSarkoezi/vim-lilypond'
 Plug 'vhdirk/vim-cmake'
+Plug 'dpelle/vim-LanguageTool'
 
 call plug#end()
