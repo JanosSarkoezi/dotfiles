@@ -15,5 +15,6 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Plug 'JanosSarkoezi/vim-lilypond'
 Plug 'vhdirk/vim-cmake'
 Plug 'dpelle/vim-LanguageTool'
+Plug 'vimwiki/vimwiki'
 
 call plug#end()
