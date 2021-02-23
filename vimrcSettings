@@ -34,8 +34,7 @@ set expandtab
 " Aktiviert die Erkennund von vim Konfiguration in einer Datei
 set modeline
 
-vnoremap <C-c> "*y :let @+=@*<CR>
-map <C-p> "+p
+set clipboard=unnamedplus
 
 " Die Zeile visuell markieren, in der der Cursor ist
 set cursorline
