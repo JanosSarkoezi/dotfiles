@@ -4,8 +4,6 @@ set hidden
 set ignorecase
 " Wenn doch Großbuchstaben bei der suche vorkommen, dann suche danachxxx
 set smartcase
-set t_Co=256
-set background=dark
 
 " Benutze die selben Symbole wie TextMate für Tabstops und EOLs
 " Damit diese Sonderzeichen › (U+203A), ▸ (U+25B8) und ¬ (U+00AC)
@@ -65,7 +63,16 @@ colors codedark
 " Hintergrundfarbe ausschalten, da in der .tmux.conf gesezter Wert gelden
 " soll. Wenn man zwischen den Panes wechelst so wird das inaktive Pane
 " asugegraut. Seie hierzu in der .tmux.conf
-" hi Normal ctermbg=none
+hi Normal      ctermbg=none guibg=none
+hi NonText     ctermbg=none ctermfg=none
+hi EndOfBuffer ctermbg=none ctermfg=none
 
-let g:languagetool_jar='$HOME/LanguageTool-5.0-SNAPSHOT/languagetool-commandline.jar'
-let g:languagetool_lang='de-DE'
+let g:tmux_navigator_no_mappings = 1
+
+nnoremap <silent> <M-left> :TmuxNavigateLeft<cr>
+nnoremap <silent> <M-down> :TmuxNavigateDown<cr>
+nnoremap <silent> <M-up> :TmuxNavigateUp<cr>
+nnoremap <silent> <M-right> :TmuxNavigateRight<cr>
+
+nmap <C-Left> <C-]>
+nmap <C-Right> <C-T>
