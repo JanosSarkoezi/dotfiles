@@ -8,5 +8,6 @@ Plug 'tpope/vim-fugitive'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'jpalardy/vim-slime'
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'fcpg/vim-waikiki'
 
 call plug#end()
