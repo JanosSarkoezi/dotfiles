@@ -56,6 +56,7 @@ __run-rdp()
 			subcommands=(
 				'db:Start a remote desktop to DB.'
 				'visio:Start a remote desktop to Visio.'
+				'iv-ts:Start a remote desktop to iv-ts.'
 			)
 			_describe -t commands 'run rdp' subcommands
 		;;
