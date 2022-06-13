@@ -57,6 +57,9 @@ _handle_rdp() {
         (visio)
             xfreerdp +clipboard /u:intervista\\saj /v:iv-tsplus-01 /size:1850x906 /drive:shared,/home/saj/share
         ;;
+        (iv-ts)
+            xfreerdp +clipboard /u:intervista\\saj /v:iv-ts /size:1850x906 /drive:shared,/home/saj/share
+        ;;
    esac
 }
 
