@@ -9,5 +9,6 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'jpalardy/vim-slime'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'fcpg/vim-waikiki'
+Plug 'dpelle/vim-LanguageTool'
 
 call plug#end()
