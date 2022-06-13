@@ -1,3 +1,3 @@
-let g:waikiki_roots = ['~/zk/']
-let maplocalleader = " "
-let g:waikiki_default_maps = 1
+let g:languagetool_jar='$HOME/.local/bin/LanguageTool-5.7/languagetool-commandline.jar'
+let g:languagetool_lang='de-DE'
+
