@@ -1,1 +1,3 @@
 let g:waikiki_roots = ['~/zk/']
+let maplocalleader = " "
+let g:waikiki_default_maps = 1
