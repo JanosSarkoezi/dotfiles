@@ -88,6 +88,7 @@ alias vim='nvim'
 alias debtree2="debtree --no-version --max-depth=2"
 alias mc='tmux split -h lf; lf'
 alias gdvim='git difftool --no-prompt --tool=vimdiff --diff-algorithm=default'
+alias kubectl="minikube kubectl --"
 
 export EDITOR='nvim'
 export TERMINAL='st -e'
