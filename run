@@ -52,13 +52,13 @@ _handle_jenkins() {
 _handle_rdp() {
     case $1 in
         (db)
-            xfreerdp +clipboard /u:Administrator /v:db.iv.lan /f /drive:shared,/home/saj/share
+            xfreerdp +clipboard +toggle-fullscreen /u:Administrator /v:db.iv.lan /f /drive:shared,/home/saj/share
         ;;
         (visio)
-            xfreerdp +clipboard /u:intervista\\saj /v:iv-tsplus-01 /f /drive:shared,/home/saj/share
+            xfreerdp +clipboard +toggle-fullscreen /u:intervista\\saj /v:iv-tsplus-01 /f /drive:shared,/home/saj/share
         ;;
         (iv-ts)
-            xfreerdp +clipboard /u:intervista\\saj /v:iv-ts /f /drive:shared,/home/saj/share
+            xfreerdp +clipboard +toggle-fullscreen /u:intervista\\saj /v:iv-ts /f /drive:shared,/home/saj/share
         ;;
    esac
 }
