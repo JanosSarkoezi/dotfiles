@@ -95,6 +95,8 @@ export TERMINAL='st -e'
 export OPENER='mimeopen'
 setopt rm_star_silent
 
+eval "$(zoxide init zsh)"
+
 eval "$(lesspipe)"
 
 # colored Manpages
