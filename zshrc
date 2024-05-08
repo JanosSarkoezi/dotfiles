@@ -96,6 +96,7 @@ export OPENER='mimeopen'
 setopt rm_star_silent
 
 eval "$(zoxide init zsh)"
+eval "$(starship init zsh)"
 
 eval "$(lesspipe)"
 
