@@ -26,7 +26,7 @@ super + x ; {e, r, s}
     {bspc quit, systemctl reboot, systemctl poweroff}
 
 super + k
-	keybLayouts
+	switch_keyboard_layout
 # super + alt + {q,r}
 # 	bspc {quit,wm -r}
 
