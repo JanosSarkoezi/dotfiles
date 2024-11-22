@@ -6,7 +6,7 @@ apt:
     git graphviz openjdk-11-jdk openjdk-17-jdk \
     openjdk-21-jdk openjdk-8-jdk locate sxiv vlc \
     x11-xkb-utils xclip zathura zsh ncdu conky-all \
-    compton feh j4-dmenu-desktop
+    compton feh j4-dmenu-desktop stow
     # sudo apt-file update
 
 updatedb:
@@ -33,15 +33,19 @@ fzf:
         ~/.fzf/install --all
     fi
 
-# Installiert nerdfont Hack.
-nerdfont:
+# Installiert nerdfont Hack und JeBranisMono
+nerdfont: cargo
     #!/usr/bin/env bash
     mkdir -p ~/.local/share/fonts
-    cd ~/.local/share/fonts
-    curl -LO https://github.com/source-foundry/Hack/releases/download/v3.003/Hack-v3.003-ttf.zip
-    curl -LO https://github.com/JetBrains/JetBrainsMono/releases/download/v2.304/JetBrainsMono-2.304.zip
-    atool -x Hack-v3.003-ttf.zip
-    atool -x JetBrainsMono-2.304.zip
+    if fc-list | rg "Hack|JetBrains" > /dev/null; then
+        echo "Hack und Jebranis sind installiert"
+    else
+        cd ~/.local/share/fonts && rm -fr *
+        curl -LO https://github.com/source-foundry/Hack/releases/download/v3.003/Hack-v3.003-ttf.zip
+        curl -LO https://github.com/JetBrains/JetBrainsMono/releases/download/v2.304/JetBrainsMono-2.304.zip
+        atool -x Hack-v3.003-ttf.zip
+        atool -x JetBrainsMono-2.304.zip
+    fi
 
 # Installiert nvm
 nvm:
