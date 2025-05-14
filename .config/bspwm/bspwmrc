@@ -1,4 +1,4 @@
-#! /bin/sh
+#!/bin/sh
 
 sxhkd -m 1&
 compton &
@@ -7,16 +7,18 @@ conky &
 # polybar example&
 
 # mkfifo ~/sxhkd.fifo && sxhkd -s ~/sxhkd.fifo &&
- bspc monitor -d I II III IV V VI VII VIII IX X
-# INTERNAL_MONITOR="DVI-I-1"
-# EXTERNAL_MONITOR="HDMI-0"
-# if [[ $(xrandr -q | grep "${EXTERNAL_MONITOR} connected") ]]; then
-#   xrandr --output ${INTERNAL_MONITOR} --primary --mode 1920x1080 --rotate normal --output ${EXTERNAL_MONITOR} --mode 1920x1080 --rotate normal --left-of ${INTERNAL_MONITOR}
-#   bspc monitor "$EXTERNAL_MONITOR" -d VI VII VIII IX X 
-#   bspc monitor "$INTERNAL_MONITOR" -d I II III IV V
-#   bspc wm -O "$INTERNAL_MONITOR" "$EXTERNAL_MONITOR"
+# bspc monitor -d I II III IV V VI VII VIII IX X
+INTERNAL_MONITOR="DVI-D-0"
+EXTERNAL_MONITOR="HDMI-0"
+# EXTERNAL_CONNECTED=$(xrandr | grep "$EXTERNAL_MONITOR connected" ; echo $?)
+
+# if [[ $EXTERNAL_CONNECTED -eq 0 ]] ; then
+  xrandr --output "$INTERNAL_MONITOR" --primary --mode 1920x1080 --pos 1920x0 --rotate normal --output "$EXTERNAL_MONITOR" --mode 1920x1080 --pos 0x0 --rotate normal
+  bspc monitor "$EXTERNAL_MONITOR" -d VI VII VIII IX X 
+  bspc monitor "$INTERNAL_MONITOR" -d I II III IV V
+  bspc wm -O "$INTERNAL_MONITOR" "$EXTERNAL_MONITOR"
 # else
-#   bspc monitor -d I II III IV V VI VII VIII IX X
+#  bspc monitor -d I II III IV V VI VII VIII IX X
 # fi
 
 bspc config ignore_ewmh_focus true
